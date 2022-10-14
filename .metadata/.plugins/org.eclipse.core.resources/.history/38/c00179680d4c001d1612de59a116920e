@@ -1,0 +1,12 @@
+package Logica;
+
+public class TargetaSocial extends Targeta{
+	private String nombreA;
+	private String nombreB;
+	public TargetaSocial(ContactoUsuario contactoA, Contacto contactoB) {
+		super(contactoA.getEmail(), contactoB.getEmail());
+		this.nombreA = nombreA;
+		this.nombreB = nombreB;
+	}
+
+}

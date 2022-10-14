@@ -1,0 +1,9 @@
+package Logica;
+
+public class ContactosLocales {
+
+	public ContactosLocales() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,18 @@
+package Logica;
+
+public class ContactosPendientes {
+	private final String targeta;
+
+	public ContactosPendientes() {
+		this.targeta = "No hay mensajes";
+	}
+
+	public String getTargeta() {
+		return targeta;
+	}
+
+	public void setTargeta(String targeta) {
+		this.targeta = targeta;
+	}
+
+}

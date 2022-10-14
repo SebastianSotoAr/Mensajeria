@@ -1,0 +1,19 @@
+package Logica;
+
+public class TargetaNegocios extends Targeta{
+	private String logo;
+	private String descripcion;
+	private String termino;
+	private String nombreCompletoA;
+	private String nombreCompletoB;
+	
+	public TargetaNegocios(ContactoUsuario contactoA, Contacto contactoB) {
+		super(contactoA.getEmail(), contactoB.getEmail());
+		this.logo = contactoA.getLogoNegocio();
+		this.descripcion = contactoA.getDescripcionNegocio();
+		this.termino = contactoA.getTerminosNegocio();
+		this.nombreCompletoA = contactoA.getNombreCompleto();
+		this.nombreCompletoB = contactoB.getNombreCompleto();
+	}
+	
+}

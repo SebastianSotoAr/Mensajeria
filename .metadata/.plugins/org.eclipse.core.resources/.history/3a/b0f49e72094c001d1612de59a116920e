@@ -1,0 +1,17 @@
+package Logica;
+
+import java.util.ArrayList;
+
+public class ContactoUsuario extends Contacto{
+	private String logoNegocio;
+	private String descripcionNegocio;
+	private String terminosNegocio;
+	private ArrayList<TargetaNegocios> targetasNegocios;
+	private ArrayList<TargetaSocial> TargetasSociales;
+	
+
+	public ContactoUsuario() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

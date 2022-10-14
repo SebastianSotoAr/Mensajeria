@@ -1,0 +1,14 @@
+package Logica;
+
+public class TargetaNegocios {
+	private String logo;
+	private String descripcion;
+	private String termino;
+	private String nombreCompletoA;
+	private String nombreCompletoB;
+
+	public TargetaNegocios() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

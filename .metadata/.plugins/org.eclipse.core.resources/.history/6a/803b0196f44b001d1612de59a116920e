@@ -1,0 +1,9 @@
+package Logica;
+
+public class Targeta {
+
+	public Targeta() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

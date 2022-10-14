@@ -1,0 +1,17 @@
+package Logica;
+
+import java.util.ArrayList;
+
+public class Notificacion {
+	private ArrayList<TargetaNegocios> targetasNegociosLeidas;
+	private ArrayList<TargetaSocial> targetasSocialesLeidas;
+	private ArrayList<TargetaNegocios> targetasNegociosNoLeidas;
+	private ArrayList<TargetaSocial> targetasSocialesNoLeidas;
+	public Notificacion() {
+		this.targetasNegociosLeidas = new ArrayList<TargetaNegocios>();
+		this.targetasSocialesLeidas = targetasSocialesLeidas;
+		this.targetasNegociosNoLeidas = new ArrayList<TargetaNegocios>();
+		this.targetasSocialesNoLeidas = targetasSocialesNoLeidas;
+	}
+	
+}

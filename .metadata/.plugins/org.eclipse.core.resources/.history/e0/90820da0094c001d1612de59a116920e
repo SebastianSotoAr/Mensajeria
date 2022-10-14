@@ -1,0 +1,22 @@
+package Logica;
+
+import java.util.ArrayList;
+
+public class ContactoUsuario extends Contacto{
+	private String logoNegocio;
+	private String descripcionNegocio;
+	private String terminosNegocio;
+	private ArrayList<TargetaNegocios> targetasNegocios;
+	private ArrayList<TargetaSocial> TargetasSociales;
+	
+	public ContactoUsuario(Usuario usuario, ArrayList<TargetaNegocios> targetasNegocios,
+			ArrayList<TargetaSocial> targetasSociales) {
+		super(usuario.getNombre(), usuario.getEmail(), usuario.getNombreCompleto());
+		this.logoNegocio = logoNegocio;
+		this.descripcionNegocio = descripcionNegocio;
+		this.terminosNegocio = terminosNegocio;
+		this.targetasNegocios = targetasNegocios;
+		this.TargetasSociales = targetasSociales;
+	}
+	
+}

@@ -1,0 +1,15 @@
+package Logica;
+
+import java.util.ArrayList;
+
+public class Notificacion {
+	private ArrayList<TargetaNegocios> targetasNegociosLeidas;
+	private ArrayList<TargetaSocial> TargetasSocialesLeidas;
+	private ArrayList<TargetaNegocios> targetasNegociosNoLeidas;
+	private ArrayList<TargetaSocial> TargetasSocialesNoLeidas;
+
+	public Notificacion() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

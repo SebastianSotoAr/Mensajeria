@@ -1,0 +1,9 @@
+package Logica;
+
+public class TargetaNegocios {
+
+	public TargetaNegocios() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

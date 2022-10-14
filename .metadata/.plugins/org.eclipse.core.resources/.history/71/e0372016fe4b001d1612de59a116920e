@@ -1,0 +1,9 @@
+package Logica;
+
+public class ContactosPendientes {
+
+	public ContactosPendientes() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

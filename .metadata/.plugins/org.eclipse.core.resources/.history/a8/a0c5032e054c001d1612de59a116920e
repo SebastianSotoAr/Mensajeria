@@ -1,0 +1,13 @@
+package Logica;
+
+public class Contacto {
+	private int id;
+	private String nombre;
+	private String email;
+	private String nombreCompleto;
+
+	public Contacto() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

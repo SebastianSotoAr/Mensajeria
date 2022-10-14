@@ -1,0 +1,13 @@
+package Logica;
+
+import java.util.ArrayList;
+
+public class ContactosLocales {
+	private ArrayList<TargetaNegocios> targetasNegocios;
+	private ArrayList<TargetaSocial> TargetasSociales;
+
+	public ContactosLocales() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,17 @@
+package Logica;
+
+import java.time.LocalDateTime;
+
+public class Targeta {
+	private final LocalDateTime fecha;
+	private String titulo;
+	private String cuerpo;
+	private String emailA;
+	private String emailB;
+
+	public Targeta() {
+		fecha = LocalDateTime.now();
+		System.out.print(fecha);
+	}
+
+}

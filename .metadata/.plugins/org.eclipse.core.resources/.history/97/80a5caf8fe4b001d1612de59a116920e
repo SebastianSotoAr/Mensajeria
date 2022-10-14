@@ -1,0 +1,16 @@
+package Logica;
+
+public class Usuario {
+	private int id;
+	private String nombre;
+	private String email;
+	private String nombreCompleto;
+	private String logoNegocio;
+	private String descripcionNegocio;
+	private String terminosNegocio;
+
+	public Usuario() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

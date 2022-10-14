@@ -1,0 +1,16 @@
+package Logica;
+
+import java.time.LocalDate;
+
+public class Targeta {
+	private LocalDate fecha;
+	private String titulo;
+	private String cuerpo;
+	private String emailA;
+	private String emailB;
+
+	public Targeta() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

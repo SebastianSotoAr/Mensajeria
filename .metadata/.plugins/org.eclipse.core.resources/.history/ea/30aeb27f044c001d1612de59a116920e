@@ -1,0 +1,27 @@
+package Logica;
+
+import java.time.LocalDateTime;
+
+public class Targeta {
+	private final LocalDateTime fecha;
+	private String titulo;
+	private String cuerpo;
+	private String emailA;
+	private String emailB;
+
+	public Targeta(String emailA, String emailB) {
+		this.fecha = LocalDateTime.now();
+		this.titulo = "Sin titulo";
+		this.cuerpo = "Sin cuerpo";
+		this.emailA = emailA;
+		this.emailB = emailB;
+	}
+
+	public Targeta(String titulo, String cuerpo, String emailA, String emailB) {
+		this.fecha = LocalDateTime.now();
+		this.titulo = titulo;
+		this.cuerpo = cuerpo;
+		this.emailA = emailA;
+		this.emailB = emailB;
+	}
+}

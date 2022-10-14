@@ -1,0 +1,9 @@
+package Logica;
+
+public class Notificacion {
+
+	public Notificacion() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,24 @@
+package Logica;
+
+import java.util.ArrayList;
+
+public class Usuario {
+	private int id;
+	private String nombre;
+	private String email;
+	private String nombreCompleto;
+	private ArrayList<TargetaNegocios> targetasNegocios;
+	private ArrayList<TargetaSocial> TargetasSociales;
+	private String logoNegocio;
+	private String descripcionNegocio;
+	private String terminosNegocio;
+	private Notificacion notificacion;
+	private ContactoUsuario contactoUsuario;
+	private ArrayList<ContactosLocales> contactosLocales;
+	private ArrayList<ContactosPendientes> contactosPendientes;
+
+	public Usuario() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
