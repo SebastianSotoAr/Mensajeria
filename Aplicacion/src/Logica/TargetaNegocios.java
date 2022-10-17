@@ -1,13 +1,13 @@
 package Logica;
 
-public class TargetaNegocios extends Targeta{
+class TargetaNegocios extends Targeta{
 	private String logo;
 	private String descripcion;
 	private String termino;
 	private String nombreCompletoA;
 	private String nombreCompletoB;
 	
-	public TargetaNegocios(ContactoUsuario contactoA, Contacto contactoB) {
+	protected TargetaNegocios(ContactoUsuario contactoA, Contacto contactoB) {
 		super(contactoA.getEmail(), contactoB.getEmail());
 		this.logo = contactoA.getLogoNegocio();
 		this.descripcion = contactoA.getDescripcionNegocio();
@@ -16,7 +16,7 @@ public class TargetaNegocios extends Targeta{
 		this.nombreCompletoB = contactoB.getNombreCompleto();
 	}
 
-	public TargetaNegocios(String titulo, String cuerpo, ContactoUsuario contactoA, Contacto contactoB) {
+	protected TargetaNegocios(String titulo, String cuerpo, ContactoUsuario contactoA, Contacto contactoB) {
 		super(titulo, cuerpo, contactoA.getEmail(), contactoB.getEmail());
 		this.logo = contactoA.getLogoNegocio();
 		this.descripcion = contactoA.getDescripcionNegocio();
@@ -25,44 +25,44 @@ public class TargetaNegocios extends Targeta{
 		this.nombreCompletoB = contactoB.getNombreCompleto();
 	}
 
-	public String getLogo() {
+	protected String getLogo() {
 		return logo;
 	}
 
-	public void setLogo(String logo) {
+	protected void setLogo(String logo) {
 		this.logo = logo;
 	}
 
-	public String getDescripcion() {
+	protected String getDescripcion() {
 		return descripcion;
 	}
 
-	public void setDescripcion(String descripcion) {
+	protected void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
 
-	public String getTermino() {
+	protected String getTermino() {
 		return termino;
 	}
 
-	public void setTermino(String termino) {
+	protected void setTermino(String termino) {
 		this.termino = termino;
 	}
 
-	public String getNombreCompletoA() {
+	protected String getNombreCompletoA() {
 		return nombreCompletoA;
 	}
 
-	public void setNombreCompletoA(String nombreCompletoA) {
+	protected void setNombreCompletoA(String nombreCompletoA) {
 		this.nombreCompletoA = nombreCompletoA;
 	}
 
-	public String getNombreCompletoB() {
+	protected String getNombreCompletoB() {
 		return nombreCompletoB;
 	}
 
-	public void setNombreCompletoB(String nombreCompletoB) {
+	protected void setNombreCompletoB(String nombreCompletoB) {
 		this.nombreCompletoB = nombreCompletoB;
 	}
-
+	
 }

@@ -1,38 +1,43 @@
 package Logica;
 
-public class Contacto {
+class Contacto {
 	private String nombre;
 	private String email;
 	private String nombreCompleto;
 
-	public Contacto(String nombre, String email, String nombreCompleto) {
+	protected Contacto(String nombre, String email, String nombreCompleto) {
 		this.nombre = nombre;
 		this.email = email;
 		this.nombreCompleto = nombreCompleto;
 	}
 
-	public String getNombre() {
+	protected String getNombre() {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
+	protected void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-	public String getEmail() {
+	protected String getEmail() {
 		return email;
 	}
 
-	public void setEmail(String email) {
+	protected void setEmail(String email) {
 		this.email = email;
 	}
 
-	public String getNombreCompleto() {
+	protected String getNombreCompleto() {
 		return nombreCompleto;
 	}
 
-	public void setNombreCompleto(String nombreCompleto) {
+	protected void setNombreCompleto(String nombreCompleto) {
 		this.nombreCompleto = nombreCompleto;
+	}
+
+	@Override
+	public String toString() {
+		return "Contacto [nombre=" + nombre + ", email=" + email + ", nombreCompleto=" + nombreCompleto + "]";
 	}
 	
 }

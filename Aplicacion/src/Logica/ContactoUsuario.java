@@ -2,60 +2,59 @@ package Logica;
 
 import java.util.ArrayList;
 
-public class ContactoUsuario extends Contacto{
+class ContactoUsuario extends Contacto{
 	private String logoNegocio;
 	private String descripcionNegocio;
 	private String terminosNegocio;
 	private ArrayList<TargetaNegocios> targetasNegocios;
 	private ArrayList<TargetaSocial> TargetasSociales;
 	
-	public ContactoUsuario(Usuario usuario, ArrayList<TargetaNegocios> targetasNegocios,
-			ArrayList<TargetaSocial> targetasSociales) {
+	protected ContactoUsuario(Usuario usuario) {
 		super(usuario.getNombre(), usuario.getEmail(), usuario.getNombreCompleto());
 		this.logoNegocio = usuario.getLogoNegocio();
 		this.descripcionNegocio = usuario.getDescripcionNegocio();
 		this.terminosNegocio = usuario.getTerminosNegocio();
-		this.targetasNegocios = targetasNegocios;
-		this.TargetasSociales = targetasSociales;
+		this.targetasNegocios = new ArrayList<TargetaNegocios>();
+		this.TargetasSociales = new ArrayList<TargetaSocial>();
 	}
 
-	public String getLogoNegocio() {
+	protected String getLogoNegocio() {
 		return logoNegocio;
 	}
 
-	public void setLogoNegocio(String logoNegocio) {
+	protected void setLogoNegocio(String logoNegocio) {
 		this.logoNegocio = logoNegocio;
 	}
 
-	public String getDescripcionNegocio() {
+	protected String getDescripcionNegocio() {
 		return descripcionNegocio;
 	}
 
-	public void setDescripcionNegocio(String descripcionNegocio) {
+	protected void setDescripcionNegocio(String descripcionNegocio) {
 		this.descripcionNegocio = descripcionNegocio;
 	}
 
-	public String getTerminosNegocio() {
+	protected String getTerminosNegocio() {
 		return terminosNegocio;
 	}
 
-	public void setTerminosNegocio(String terminosNegocio) {
+	protected void setTerminosNegocio(String terminosNegocio) {
 		this.terminosNegocio = terminosNegocio;
 	}
 
-	public ArrayList<TargetaNegocios> getTargetasNegocios() {
+	protected ArrayList<TargetaNegocios> getTargetasNegocios() {
 		return targetasNegocios;
 	}
 
-	public void setTargetasNegocios(ArrayList<TargetaNegocios> targetasNegocios) {
+	protected void setTargetasNegocios(ArrayList<TargetaNegocios> targetasNegocios) {
 		this.targetasNegocios = targetasNegocios;
 	}
 
-	public ArrayList<TargetaSocial> getTargetasSociales() {
+	protected ArrayList<TargetaSocial> getTargetasSociales() {
 		return TargetasSociales;
 	}
 
-	public void setTargetasSociales(ArrayList<TargetaSocial> targetasSociales) {
+	protected void setTargetasSociales(ArrayList<TargetaSocial> targetasSociales) {
 		TargetasSociales = targetasSociales;
 	}
 	

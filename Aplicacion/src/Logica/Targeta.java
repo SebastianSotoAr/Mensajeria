@@ -2,14 +2,14 @@ package Logica;
 
 import java.time.LocalDateTime;
 
-public class Targeta {
+class Targeta {
 	private final LocalDateTime fecha;
 	private String titulo;
 	private String cuerpo;
 	private String emailA;
 	private String emailB;
 
-	public Targeta(String emailA, String emailB) {
+	protected Targeta(String emailA, String emailB) {
 		this.fecha = LocalDateTime.now();
 		this.titulo = "Sin titulo";
 		this.cuerpo = "Sin cuerpo";
@@ -17,7 +17,7 @@ public class Targeta {
 		this.emailB = emailB;
 	}
 
-	public Targeta(String titulo, String cuerpo, String emailA, String emailB) {
+	protected Targeta(String titulo, String cuerpo, String emailA, String emailB) {
 		this.fecha = LocalDateTime.now();
 		this.titulo = titulo;
 		this.cuerpo = cuerpo;
@@ -25,39 +25,40 @@ public class Targeta {
 		this.emailB = emailB;
 	}
 
-	public String getTitulo() {
+	protected String getTitulo() {
 		return titulo;
 	}
 
-	public void setTitulo(String titulo) {
+	protected void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 
-	public String getCuerpo() {
+	protected String getCuerpo() {
 		return cuerpo;
 	}
 
-	public void setCuerpo(String cuerpo) {
+	protected void setCuerpo(String cuerpo) {
 		this.cuerpo = cuerpo;
 	}
 
-	public String getEmailA() {
+	protected String getEmailA() {
 		return emailA;
 	}
 
-	public void setEmailA(String emailA) {
+	protected void setEmailA(String emailA) {
 		this.emailA = emailA;
 	}
 
-	public String getEmailB() {
+	protected String getEmailB() {
 		return emailB;
 	}
 
-	public void setEmailB(String emailB) {
+	protected void setEmailB(String emailB) {
 		this.emailB = emailB;
 	}
 
-	public LocalDateTime getFecha() {
+	protected LocalDateTime getFecha() {
 		return fecha;
 	}
+	
 }

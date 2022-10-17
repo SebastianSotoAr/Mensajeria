@@ -2,30 +2,29 @@ package Logica;
 
 import java.util.ArrayList;
 
-public class ContactosLocales extends Contacto{
+class ContactosLocales extends Contacto{
 	private ArrayList<TargetaNegocios> targetasNegocios;
 	private ArrayList<TargetaSocial> targetasSociales;
 
-	public ContactosLocales(String nombre, String email, String nombreCompleto,
-			ArrayList<TargetaNegocios> targetasNegocios, ArrayList<TargetaSocial> targetasSociales) {
+	protected ContactosLocales(String nombre, String email, String nombreCompleto) {
 		super(nombre, email, nombreCompleto);
-		this.targetasNegocios = targetasNegocios;
-		this.targetasSociales = targetasSociales;
+		this.targetasNegocios = new ArrayList<TargetaNegocios>();
+		this.targetasSociales = new ArrayList<TargetaSocial>();
 	}
 
-	public ArrayList<TargetaNegocios> getTargetasNegocios() {
+	protected ArrayList<TargetaNegocios> getTargetasNegocios() {
 		return targetasNegocios;
 	}
 
-	public void setTargetasNegocios(ArrayList<TargetaNegocios> targetasNegocios) {
+	protected void setTargetasNegocios(ArrayList<TargetaNegocios> targetasNegocios) {
 		this.targetasNegocios = targetasNegocios;
 	}
 
-	public ArrayList<TargetaSocial> getTargetasSociales() {
+	protected ArrayList<TargetaSocial> getTargetasSociales() {
 		return targetasSociales;
 	}
 
-	public void setTargetasSociales(ArrayList<TargetaSocial> targetasSociales) {
+	protected void setTargetasSociales(ArrayList<TargetaSocial> targetasSociales) {
 		this.targetasSociales = targetasSociales;
 	}
 
