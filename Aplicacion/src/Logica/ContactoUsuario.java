@@ -82,8 +82,42 @@ class ContactoUsuario extends Contacto{
 			
 	}
 	
+	//TODO falta sereializar
+	//permite ver las notificaciones en el contacto de usurio, y crear nuevas
+	void verNotificaciones(Scanner sc) {
+		int opcion;
+		String titulo;
+		String cuerpo;
+		do {
+			System.out.println("Notificaciones: ");
+			for(Notificacion n: notificaciones) {
+				System.out.println(n);
+			}
+			System.out.println("Crear una nueva:\n0 no\n1 si");
+			opcion = sc.nextInt();
+			sc.nextLine();
+				
+			switch (opcion) {
+				case 0:
+					System.out.println("Termino modificacion de Perfil");
+					break;
+					
+				case 1:
+					System.out.print("titulo: ");
+					titulo = sc.nextLine();
+					System.out.print("cuerpo: ");
+					cuerpo = sc.nextLine();
+					notificaciones.add(new Notificacion(titulo, cuerpo));
+						
+				default:
+					System.out.println("Seleccione un numero entre 0 o 1");
+					break;	
+			}
+		}while (opcion != 0);
+	}
+	
+	//FIXME
 	@Override
-	//FIXMEN
 	public String toString() {
 		return super.toString() + "\nContactoUsuario [logoNegocio=" + logoNegocio + ", descripcionNegocio=" 
 				+ descripcionNegocio + ", terminosNegocio=" + terminosNegocio + "]";

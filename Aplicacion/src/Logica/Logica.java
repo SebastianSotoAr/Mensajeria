@@ -40,4 +40,10 @@ public class Logica {
 		usuario.seguirChat(sc);
 	}
 	
+	//TODO falta serializar
+	//Llama al metodo ver notificaciones de contacto de usuario.
+	public void verNotificaciones(Scanner sc) {
+		usuario.getContactoUsuario().verNotificaciones(sc);
+	}
+	
 }

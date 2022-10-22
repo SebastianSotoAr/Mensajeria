@@ -150,6 +150,7 @@ class Usuario {
 		return mensaje;
 	}
 	
+	//FIXME
 	//Muestra los chat con cada contacto local
 	//Cada chat se divide en targetas sociales y de negocios
 	void mostrarChats() {

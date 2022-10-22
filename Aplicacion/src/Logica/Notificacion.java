@@ -9,6 +9,14 @@ class Notificacion {
 		this.titulo = titulo;
 		this.cuerpo = cuerpo;
 	}
+	
+	//FIXME
+	@Override
+	public String toString() {
+		return "Notificacion [titulo=" + titulo + ", cuerpo=" + cuerpo + "]";
+	}
+
+
 
 	String getTitulo() {
 		return titulo;
