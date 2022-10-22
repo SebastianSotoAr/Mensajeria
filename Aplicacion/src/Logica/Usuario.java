@@ -18,12 +18,14 @@ class Usuario {
 		this.contactosPendientes = new ArrayList<ContactosPendientes>();
 	}
 
+	//FIXME
 	@Override
 	public String toString() {
 		return "Usuario [contactoUsuario=" + contactoUsuario + ", contactosLocales=" + contactosLocales
 				+ ", contactosPendientes=" + contactosPendientes + "]";
 	}
 
+	//TODO falta serializar
 	//Añade un nuevo contacto al array de contactos pendites
 	void crearNuevoContacto(Scanner sc) {
 		//Llama al metodo de clase crear contacto de pendientes que devuelve un contacto 

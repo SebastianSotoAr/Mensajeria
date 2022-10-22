@@ -24,7 +24,7 @@ public class Main {
 					break;
 					
 				case 1:
-
+					//TODO falta serializar
 					logica.editarPerfil(sc);
 					break;
 					

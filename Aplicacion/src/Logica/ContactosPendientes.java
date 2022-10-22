@@ -21,6 +21,7 @@ class ContactosPendientes extends Contacto{
 		return super.toString() + "\nContactosPendientes [targeta=" + targeta + "]";
 	}
 
+	//TODO falta serializar
 	//Permite al Usuario crear un contacto de este tipo por consola.
 	static ContactosPendientes crearContactoPendiente(Scanner sc) {
 		System.out.println("Crear Contacto");
@@ -31,8 +32,8 @@ class ContactosPendientes extends Contacto{
 		sc.nextLine();
 		System.out.print("Nombre completo: ");
 		String nombreCompleto = sc.nextLine();
-		ContactosPendientes contacto = new ContactosPendientes(nombre, email, nombreCompleto);
-		System.out.println(contacto.toString());
-		return contacto;
+		ContactosPendientes contactoP = new ContactosPendientes(nombre, email, nombreCompleto);
+		System.out.println(contactoP);
+		return contactoP;
 	}
 }

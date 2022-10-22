@@ -11,15 +11,18 @@ public class Logica {
 		this.usuario = new Usuario("Andres", "Andres@a.com", "Andres Alvarez Arcila", "Andidas",
 				"No vendo zapatos...", "Solo efectivo");
 	}
-	
+	//TODO falta serializar
 	//Llama al metodo editar perfil de usuario.
 	public void editarPerfil(Scanner sc) {
 		usuario.getContactoUsuario().editarPerfil(sc);
 	}
 	
+	//TODO falta serializar
 	//Llama al metodo crear nuevo contacto de usuario.
 	public void crearNuevoContacto(Scanner sc) {
 		usuario.crearNuevoContacto(sc);
+		//FIXME solo esta para ver el funcionamiento
+		System.out.println(usuario);
 	}
 	
 	//Llama al metodo empezar chat de usuario.

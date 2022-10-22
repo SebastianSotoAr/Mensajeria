@@ -20,6 +20,7 @@ class ContactoUsuario extends Contacto{
 		this.notificaciones = new ArrayList<Notificacion>();
 	}
 	
+	//TODO falta serializar
 	//Cambia los atributos del usuario, menos notificaciones y contactos
 	void editarPerfil(Scanner sc) {
 		int opcion;
@@ -77,14 +78,14 @@ class ContactoUsuario extends Contacto{
 					break;	
 			}
 		}while (opcion != 0);
+		//falta serializar
 			
 	}
 	
 	@Override
 	public String toString() {
 		return super.toString() + "\nContactoUsuario [logoNegocio=" + logoNegocio + ", descripcionNegocio=" 
-				+ descripcionNegocio + ", terminosNegocio=" + terminosNegocio + ", notificaciones="
-				+ notificaciones + "]";
+				+ descripcionNegocio + ", terminosNegocio=" + terminosNegocio + "]";
 	}
 
 	String getLogoNegocio() {
