@@ -23,7 +23,7 @@ public class Logica {
 		usuario.crearNuevoContacto(sc);
 	}
 	
-	//VOYAQUI
+	//TODO falta serializar
 	//Llama al metodo empezar chat de usuario.
 	public void empezarChat(Scanner sc) {
 		usuario.empezarChat(sc);
@@ -33,4 +33,11 @@ public class Logica {
 	public void mostrarChats() {
 		usuario.mostrarChats();
 	}
+	
+	//TODO falta serializar
+	//Llama al metodo seguir chats de usuario.
+	public void seguirChat(Scanner sc) {
+		usuario.seguirChat(sc);
+	}
+	
 }

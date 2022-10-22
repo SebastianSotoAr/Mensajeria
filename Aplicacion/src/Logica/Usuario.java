@@ -32,7 +32,7 @@ class Usuario {
 		contactosPendientes.add(ContactosPendientes.crearContactoPendiente(sc));
 	}
 	
-	//VOYAQUI
+	//TODO falta serializar
 	//Permite seleccionar un contacto para iniciar una conversacion.
 	void empezarChat(Scanner sc) {
 		int opcion;
@@ -47,7 +47,6 @@ class Usuario {
 			opcion = sc.nextInt();
 			sc.nextLine();
 			
-			//VOYAQUI
 			//Revisa si se selecciono un contacto y se realiza en cambio.
 			if ((opcion > 0) && (opcion <= contactosPendientes.size())) {
 				contactoL = volverContactoLocal(opcion - 1);
@@ -67,6 +66,45 @@ class Usuario {
 		
 	}
 	
+	//TODO falta serializar
+	//Permite seleccionar un chat para seguir una conversacion
+	void seguirChat(Scanner sc) {
+		int opcion;
+		ContactosLocales contactoL;
+		do {
+			System.out.println("Elige un contacto");
+			System.out.println("0 cancelar");
+			//Imprime todos los contactos locales con un indce al principio
+			for (int i = 0; i < contactosLocales.size(); i++) {
+				System.out.println((i+1) + " " + contactosLocales.get(i).toString());
+			}
+			opcion = sc.nextInt();
+			sc.nextLine();
+			
+			//Revisa si se selecciono un contacto y se realiza en cambio.
+			if ((opcion > 0) && (opcion <= contactosLocales.size())) {
+				contactoL = contactosLocales.get(opcion - 1);
+				System.out.println("email: " + contactoL.getEmail());
+				System.out.println("Mensajes");
+				for (Mensaje m: contactoL.getMensajes()) {
+					System.out.println(m);
+				}
+					
+				contactoL.getMensajes().add(crearMensaje(sc, contactoL.getNombre(),
+						contactoL.getNombreCompleto()));
+				
+			} else if (opcion != 0) {
+				System.out.println("Seleccione un numero entre 0 y " + contactosLocales.size());
+				
+			} else {
+				System.out.println("Termino seguir chat");
+				
+			}
+			
+		} while (opcion != 0);
+		
+	}
+	
 	//Depende del metodo empezarChat para optener el indice del contacto
 	//vuele un contacto pendiente en local
 	ContactosLocales volverContactoLocal(int indice) {
@@ -76,6 +114,8 @@ class Usuario {
 		return contactoL;
 	}
 	
+	//TODO falta serializar
+	//Crea un mensaje social o local, segun la decision del usuario
 	Mensaje crearMensaje(Scanner sc, String nombre, String nombreCompleto) {
 		int opcion;
 		String titulo;
