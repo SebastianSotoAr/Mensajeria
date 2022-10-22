@@ -8,7 +8,6 @@ public class Main {
 	public static void main(String[] args) {
 		//Crea la conexion con el paquete Logica, atravez de una instacia de la clase Logica
 		Logica logica = new Logica();
-		//Crea el escaner unico usado en todo el programa
 		Scanner sc = new Scanner(System.in);
 		int opcion;
 		do {

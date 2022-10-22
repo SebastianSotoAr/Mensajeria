@@ -24,85 +24,13 @@ class Usuario {
 				+ ", contactosPendientes=" + contactosPendientes + "]";
 	}
 
-	//Cambia los atributos del usuario, menos notificaciones y contactos
-	//Resive al unico escaner del programa como parametro.
-	void editarPerfil(Scanner sc) {
-		int opcion;
-		do {
-			System.out.println(this);
-			System.out.println("Cambiar:\n0 Cancela\n1 nombre\n2 email\n3 nombreCompleto\n4 logoNegocio\n5 descripcionNegocio"
-					+ "\n6 terminosNegocio");
-			//Resive un entero (no elimina \n).
-			opcion = sc.nextInt();
-			//Elimina el \n
-			sc.nextLine();
-			
-			switch (opcion) {
-				case 0:
-					System.out.println("Termino modificacion de Perfil");
-					break;
-					
-				case 1:
-					System.out.println("Nombre actual: " + contactoUsuario.getNombre());
-					System.out.print("Nuevo nombre: ");
-					//Resive el nombre (Puede ser mas de una palabra y elimina \n).
-					contactoUsuario.setNombre(sc.nextLine());
-					break;
-					
-				case 2:
-					System.out.println("Email actual: " + contactoUsuario.getEmail());
-					System.out.print("Nuevo Email: ");
-					//Resive el email (una palabra y no elimina \n).
-					contactoUsuario.setEmail(sc.next());
-					//Elimina el \n
-					sc.nextLine();
-					break;
-					
-				case 3:
-					System.out.println("Nombre completo actual: " + contactoUsuario.getNombreCompleto());
-					System.out.print("Nuevo nombre completo: ");
-					//Resive el nombre completo (Puede ser mas de una palabra y elimina \n).
-					contactoUsuario.setNombreCompleto(sc.nextLine());
-					break;
-					
-				case 4:
-					System.out.println("Logo de negocio actual: " + contactoUsuario.getLogoNegocio());
-					System.out.print("Nuevo logo de negocio: ");
-					//Resive el logo (Puede ser mas de una palabra y elimina \n).
-					contactoUsuario.setLogoNegocio(sc.nextLine());
-					break;
-					
-				case 5:
-					System.out.println("Descripcion de negocio actual: " + contactoUsuario.getDescripcionNegocio());
-					System.out.print("Nueva descripcion de negocio: ");
-					//Resive la descripcion (Puede ser mas de una palabra y elimina \n).
-					contactoUsuario.setDescripcionNegocio(sc.nextLine());
-					break;
-					
-				case 6:
-					System.out.println("Terminos de negocio actual: " + contactoUsuario.getTerminosNegocio());
-					System.out.print("Nuevo terminos de negocio: ");
-					//Resive los terminos (Puede ser mas de una palabra y elimina \n).
-					contactoUsuario.setTerminosNegocio(sc.nextLine());
-					break;
-					
-				default:
-					System.out.println("Seleccione un numero entre 0 y 6");
-					break;	
-			}
-		}while (opcion != 0);
-		
-	}
-
 	//Añade un nuevo contacto al array de contactos pendites
-	//Resive al unico escaner del programa como parametro.
 	void crearNuevoContacto(Scanner sc) {
 		//Llama al metodo de clase crear contacto de pendientes que devuelve un contacto 
 		contactosPendientes.add(ContactosPendientes.crearContactoPendiente(sc));
 	}
 	
 	//Permite seleccionar un contacto para iniciar una conversacion.
-	//Resive al unico escaner del programa como parametro.
 	void empezarChat(Scanner sc) {
 		int opcion;
 		do {
