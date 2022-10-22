@@ -2,6 +2,7 @@ package Logica;
 
 import java.util.ArrayList;
 
+//Contacto del Usuario, contiene los mensajes enviados a si mismo
 class ContactoUsuario extends Contacto{
 	private String logoNegocio;
 	private String descripcionNegocio;
@@ -9,6 +10,7 @@ class ContactoUsuario extends Contacto{
 	private ArrayList<TargetaNegocios> targetasNegocios;
 	private ArrayList<TargetaSocial> TargetasSociales;
 	
+	//Al momento de ser el creado contacto de Usuario toma los atributos del Usuario 
 	protected ContactoUsuario(Usuario usuario) {
 		super(usuario.getNombre(), usuario.getEmail(), usuario.getNombreCompleto());
 		this.logoNegocio = usuario.getLogoNegocio();

@@ -1,14 +1,22 @@
 package Logica;
 
-class Contacto {
+//Todos los contactos tienen nombre, email y nombre completo
+abstract class Contacto {
 	private String nombre;
 	private String email;
 	private String nombreCompleto;
 
+	//Cada contacto debe tener nombre, email y nombre completo 
 	protected Contacto(String nombre, String email, String nombreCompleto) {
 		this.nombre = nombre;
 		this.email = email;
 		this.nombreCompleto = nombreCompleto;
+	}
+	
+	//Muetra describe el contacto
+	@Override
+	public String toString() {
+		return "Contacto [nombre=" + nombre + ", email=" + email + ", nombreCompleto=" + nombreCompleto + "]";
 	}
 
 	protected String getNombre() {
@@ -33,11 +41,6 @@ class Contacto {
 
 	protected void setNombreCompleto(String nombreCompleto) {
 		this.nombreCompleto = nombreCompleto;
-	}
-
-	@Override
-	public String toString() {
-		return "Contacto [nombre=" + nombre + ", email=" + email + ", nombreCompleto=" + nombreCompleto + "]";
 	}
 	
 }
