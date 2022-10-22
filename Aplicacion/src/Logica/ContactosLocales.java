@@ -4,32 +4,30 @@ import java.util.ArrayList;
 
 //Los contactos locales son personas con las que ya se inicializo una convesacion
 class ContactosLocales extends Contacto{
-	private ArrayList<TargetaNegocios> targetasNegocios;
-	private ArrayList<TargetaSocial> targetasSociales;
+	private ArrayList<MensajeNegocio> mensajeNegocio;
+	private ArrayList<MensajeSocial> mensajeSocial;
 
-	//Genera los contactos locales con los mensajes sociales y de negocios 
-	protected ContactosLocales(String nombre, String email, String nombreCompleto) {
+	//Genera los contactos locales con los mensajes sociales y de negocios
+	ContactosLocales(String nombre, String email, String nombreCompleto) {
 		super(nombre, email, nombreCompleto);
-		this.targetasNegocios = new ArrayList<TargetaNegocios>();
-		this.targetasSociales = new ArrayList<TargetaSocial>();
+		mensajeNegocio = new ArrayList<MensajeNegocio>();
+		mensajeSocial = new ArrayList<MensajeSocial>();
+	}
+
+	ArrayList<MensajeNegocio> getMensajeNegocio() {
+		return mensajeNegocio;
+	}
+
+	void setMensajeNegocio(ArrayList<MensajeNegocio> mensajeNegocio) {
+		this.mensajeNegocio = mensajeNegocio;
+	}
+
+	ArrayList<MensajeSocial> getMensajeSocial() {
+		return mensajeSocial;
+	}
+
+	void setMensajeSocial(ArrayList<MensajeSocial> mensajeSocial) {
+		this.mensajeSocial = mensajeSocial;
 	}
 	
-	
-
-	protected ArrayList<TargetaNegocios> getTargetasNegocios() {
-		return targetasNegocios;
-	}
-
-	protected void setTargetasNegocios(ArrayList<TargetaNegocios> targetasNegocios) {
-		this.targetasNegocios = targetasNegocios;
-	}
-
-	protected ArrayList<TargetaSocial> getTargetasSociales() {
-		return targetasSociales;
-	}
-
-	protected void setTargetasSociales(ArrayList<TargetaSocial> targetasSociales) {
-		this.targetasSociales = targetasSociales;
-	}
-
 }

@@ -7,57 +7,48 @@ class ContactoUsuario extends Contacto{
 	private String logoNegocio;
 	private String descripcionNegocio;
 	private String terminosNegocio;
-	private ArrayList<TargetaNegocios> targetasNegocios;
-	private ArrayList<TargetaSocial> TargetasSociales;
+	private ArrayList<Notificacion> notificaciones;
 	
 	//Al momento de ser el creado contacto de Usuario toma los atributos del Usuario 
-	protected ContactoUsuario(Usuario usuario) {
-		super(usuario.getNombre(), usuario.getEmail(), usuario.getNombreCompleto());
-		this.logoNegocio = usuario.getLogoNegocio();
-		this.descripcionNegocio = usuario.getDescripcionNegocio();
-		this.terminosNegocio = usuario.getTerminosNegocio();
-		this.targetasNegocios = new ArrayList<TargetaNegocios>();
-		this.TargetasSociales = new ArrayList<TargetaSocial>();
+	ContactoUsuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
+			String terminosNegocio) {
+		super(nombre, email, nombreCompleto);
+		this.logoNegocio = logoNegocio;
+		this.descripcionNegocio = descripcionNegocio;
+		this.terminosNegocio = terminosNegocio;
+		this.notificaciones = new ArrayList<Notificacion>();
 	}
 
-	protected String getLogoNegocio() {
+	String getLogoNegocio() {
 		return logoNegocio;
 	}
 
-	protected void setLogoNegocio(String logoNegocio) {
+	void setLogoNegocio(String logoNegocio) {
 		this.logoNegocio = logoNegocio;
 	}
 
-	protected String getDescripcionNegocio() {
+	String getDescripcionNegocio() {
 		return descripcionNegocio;
 	}
 
-	protected void setDescripcionNegocio(String descripcionNegocio) {
+	void setDescripcionNegocio(String descripcionNegocio) {
 		this.descripcionNegocio = descripcionNegocio;
 	}
 
-	protected String getTerminosNegocio() {
+	String getTerminosNegocio() {
 		return terminosNegocio;
 	}
 
-	protected void setTerminosNegocio(String terminosNegocio) {
+	void setTerminosNegocio(String terminosNegocio) {
 		this.terminosNegocio = terminosNegocio;
 	}
 
-	protected ArrayList<TargetaNegocios> getTargetasNegocios() {
-		return targetasNegocios;
+	ArrayList<Notificacion> getNotificaciones() {
+		return notificaciones;
 	}
 
-	protected void setTargetasNegocios(ArrayList<TargetaNegocios> targetasNegocios) {
-		this.targetasNegocios = targetasNegocios;
-	}
-
-	protected ArrayList<TargetaSocial> getTargetasSociales() {
-		return TargetasSociales;
-	}
-
-	protected void setTargetasSociales(ArrayList<TargetaSocial> targetasSociales) {
-		TargetasSociales = targetasSociales;
+	void setNotificaciones(ArrayList<Notificacion> notificaciones) {
+		this.notificaciones = notificaciones;
 	}
 	
 }

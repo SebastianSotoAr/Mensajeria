@@ -5,43 +5,25 @@ import java.util.Scanner;
 
 //Descrive al usuario del programa
 class Usuario {
-	private String nombre;
-	private String email;
-	private String nombreCompleto;
-	private String logoNegocio;
-	private String descripcionNegocio;
-	private String terminosNegocio;
-	private Notificacion notificacion;
 	private ContactoUsuario contactoUsuario;
 	private ArrayList<ContactosLocales> contactosLocales;
 	private ArrayList<ContactosPendientes> contactosPendientes;
 
-	//Genera al usuario
+	//Genera al Usuario y crea su ContactoUsuario
 	Usuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
 			String terminosNegocio) {
-		this.nombre = nombre;
-		this.email = email;
-		this.nombreCompleto = nombreCompleto;
-		this.logoNegocio = logoNegocio;
-		this.descripcionNegocio = descripcionNegocio;
-		this.terminosNegocio = terminosNegocio;
-		//la siguite linea necesita modificacion
-		this.notificacion = new Notificacion();
-		//Crea su propio contacto
-		this.contactoUsuario = new ContactoUsuario(this);
+		this.contactoUsuario = new ContactoUsuario(nombre, email, nombreCompleto, logoNegocio, descripcionNegocio,
+				terminosNegocio);
 		this.contactosLocales = new ArrayList<ContactosLocales>();
 		this.contactosPendientes = new ArrayList<ContactosPendientes>();
 	}
 
-	//Muestra el estado del objeto usuario
 	@Override
 	public String toString() {
-		return "Usuario [nombre=" + nombre + ", email=" + email + ", nombreCompleto=" + nombreCompleto
-				+ ", logoNegocio=" + logoNegocio + ", descripcionNegocio=" + descripcionNegocio + ", terminosNegocio="
-				+ terminosNegocio + ", notificacion=" + notificacion + ", contactoUsuario=" + contactoUsuario
-				+ ", contactosLocales=" + contactosLocales + ", contactosPendientes=" + contactosPendientes + "]";
+		return "Usuario [contactoUsuario=" + contactoUsuario + ", contactosLocales=" + contactosLocales
+				+ ", contactosPendientes=" + contactosPendientes + "]";
 	}
-	
+
 	//Cambia los atributos del usuario, menos notificaciones y contactos
 	//Resive al unico escaner del programa como parametro.
 	void editarPerfil(Scanner sc) {
@@ -61,47 +43,47 @@ class Usuario {
 					break;
 					
 				case 1:
-					System.out.println("Nombre actual: " + getNombre());
+					System.out.println("Nombre actual: " + contactoUsuario.getNombre());
 					System.out.print("Nuevo nombre: ");
 					//Resive el nombre (Puede ser mas de una palabra y elimina \n).
-					setNombre(sc.nextLine());
+					contactoUsuario.setNombre(sc.nextLine());
 					break;
 					
 				case 2:
-					System.out.println("Email actual: " + getEmail());
+					System.out.println("Email actual: " + contactoUsuario.getEmail());
 					System.out.print("Nuevo Email: ");
 					//Resive el email (una palabra y no elimina \n).
-					setEmail(sc.next());
+					contactoUsuario.setEmail(sc.next());
 					//Elimina el \n
 					sc.nextLine();
 					break;
 					
 				case 3:
-					System.out.println("Nombre completo actual: " + getNombreCompleto());
+					System.out.println("Nombre completo actual: " + contactoUsuario.getNombreCompleto());
 					System.out.print("Nuevo nombre completo: ");
 					//Resive el nombre completo (Puede ser mas de una palabra y elimina \n).
-					setNombreCompleto(sc.nextLine());
+					contactoUsuario.setNombreCompleto(sc.nextLine());
 					break;
 					
 				case 4:
-					System.out.println("Logo de negocio actual: " + getLogoNegocio());
+					System.out.println("Logo de negocio actual: " + contactoUsuario.getLogoNegocio());
 					System.out.print("Nuevo logo de negocio: ");
 					//Resive el logo (Puede ser mas de una palabra y elimina \n).
-					setLogoNegocio(sc.nextLine());
+					contactoUsuario.setLogoNegocio(sc.nextLine());
 					break;
 					
 				case 5:
-					System.out.println("Descripcion de negocio actual: " + getDescripcionNegocio());
+					System.out.println("Descripcion de negocio actual: " + contactoUsuario.getDescripcionNegocio());
 					System.out.print("Nueva descripcion de negocio: ");
 					//Resive la descripcion (Puede ser mas de una palabra y elimina \n).
-					setDescripcionNegocio(sc.nextLine());
+					contactoUsuario.setDescripcionNegocio(sc.nextLine());
 					break;
 					
 				case 6:
-					System.out.println("Terminos de negocio actual: " + getTerminosNegocio());
+					System.out.println("Terminos de negocio actual: " + contactoUsuario.getTerminosNegocio());
 					System.out.print("Nuevo terminos de negocio: ");
 					//Resive los terminos (Puede ser mas de una palabra y elimina \n).
-					setTerminosNegocio(sc.nextLine());
+					contactoUsuario.setTerminosNegocio(sc.nextLine());
 					break;
 					
 				default:
@@ -111,7 +93,7 @@ class Usuario {
 		}while (opcion != 0);
 		
 	}
-	
+
 	//Añade un nuevo contacto al array de contactos pendites
 	//Resive al unico escaner del programa como parametro.
 	void crearNuevoContacto(Scanner sc) {
@@ -171,14 +153,16 @@ class Usuario {
 			switch (opcion) {
 				case 0:
 					//crea y añade un mesaje de negocios al contacto recien creado
-					contactoL.getTargetasNegocios().add(new TargetaNegocios(titulo, cuerpo,
-							this.getContactoUsuario(), contactoP));
+					contactoL.getMensajeNegocio().add(new MensajeNegocio(titulo, cuerpo, 
+							contactoUsuario.getLogoNegocio(), contactoUsuario.getDescripcionNegocio(),
+							contactoUsuario.getTerminosNegocio(), contactoUsuario.getNombreCompleto(),
+							contactoP.getNombreCompleto()));
 					break;
 					
 				case 1:
 					//crea y añade un mesaje social al contacto recien creado
-					contactoL.getTargetasSociales().add(new TargetaSocial(titulo, cuerpo,
-							this.getContactoUsuario(), contactoP));
+					contactoL.getMensajeSocial().add(new MensajeSocial(titulo, cuerpo, 
+							contactoUsuario.getNombre(), contactoP.getNombre()));
 					break;
 					
 				default:
@@ -197,70 +181,14 @@ class Usuario {
 		for(ContactosLocales c: contactosLocales) {
 			System.out.println(c.getEmail());
 			System.out.println("Targetas de Negocios");
-			for (TargetaNegocios tn: c.getTargetasNegocios()) {
+			for (MensajeNegocio tn: c.getMensajeNegocio()) {
 				System.out.println(tn);
 			}
 			System.out.println("Targetas de Sociales");
-			for (TargetaSocial ts: c.getTargetasSociales()) {
+			for (MensajeSocial ts: c.getMensajeSocial()) {
 				System.out.println(ts);
 			}
 		}
-	}
-	
-	String getNombre() {
-		return nombre;
-	}
-
-	void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	String getEmail() {
-		return email;
-	}
-
-	void setEmail(String email) {
-		this.email = email;
-	}
-
-	String getNombreCompleto() {
-		return nombreCompleto;
-	}
-
-	void setNombreCompleto(String nombreCompleto) {
-		this.nombreCompleto = nombreCompleto;
-	}
-
-	String getLogoNegocio() {
-		return logoNegocio;
-	}
-
-	void setLogoNegocio(String logoNegocio) {
-		this.logoNegocio = logoNegocio;
-	}
-
-	String getDescripcionNegocio() {
-		return descripcionNegocio;
-	}
-
-	void setDescripcionNegocio(String descripcionNegocio) {
-		this.descripcionNegocio = descripcionNegocio;
-	}
-
-	String getTerminosNegocio() {
-		return terminosNegocio;
-	}
-
-	void setTerminosNegocio(String terminosNegocio) {
-		this.terminosNegocio = terminosNegocio;
-	}
-
-	Notificacion getNotificacion() {
-		return notificacion;
-	}
-
-	void setNotificacion(Notificacion notificacion) {
-		this.notificacion = notificacion;
 	}
 
 	ContactoUsuario getContactoUsuario() {
@@ -286,5 +214,5 @@ class Usuario {
 	void setContactosPendientes(ArrayList<ContactosPendientes> contactosPendientes) {
 		this.contactosPendientes = contactosPendientes;
 	}
-	
+		
 }
