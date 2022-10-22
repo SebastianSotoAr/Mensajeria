@@ -20,7 +20,7 @@ class MensajeSocial extends Mensaje{
 	
 	@Override
 	public String toString() {
-		return "TargetaSocial [titulo=" + this.getTitulo() + ", cuerpo=" + this.getCuerpo() 
+		return "MensajeSocial [titulo=" + this.getTitulo() + ", cuerpo=" + this.getCuerpo() 
 		+ ", nombreA=" + nombreA + ", nombreB=" + nombreB + "]";
 	}
 

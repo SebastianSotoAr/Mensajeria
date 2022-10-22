@@ -18,7 +18,7 @@ class MensajeNegocio extends Mensaje{
 	}
 	
 	public String toString() {
-		return  "TargetaNegocios [titulo=" + this.getTitulo() + ", cuerpo=" + this.getCuerpo() 
+		return  "MensajeNegocios [titulo=" + this.getTitulo() + ", cuerpo=" + this.getCuerpo() 
 			+ ", logo=" + logo + ", descripcion=" + descripcion + ", termino=" + termino
 			+ ", nombreCompletoA=" + nombreCompletoA + ", nombreCompletoB=" 
 			+ nombreCompletoB + "]";

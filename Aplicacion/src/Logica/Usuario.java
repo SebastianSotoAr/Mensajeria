@@ -95,16 +95,18 @@ class Usuario {
 					mensaje = new MensajeNegocio(titulo, cuerpo, contactoUsuario.getLogoNegocio(),
 							contactoUsuario.getDescripcionNegocio(), contactoUsuario.getTerminosNegocio(),
 							contactoUsuario.getNombreCompleto(), nombreCompleto);
+					break;
 					
 				case 1:
 					//crea y añade un mesaje social al contacto recien creado
 					mensaje = new MensajeSocial(titulo, cuerpo, contactoUsuario.getNombre(), nombre);
+					break;
 					
 				default:
 					System.out.println("Seleccione un numero entre 0 o 1");
 					break;
 			}
-		} while (opcion != 0 || opcion != 1);
+		} while (opcion != 0 && opcion != 1);
 		return mensaje;
 	}
 	
@@ -112,8 +114,8 @@ class Usuario {
 	//Cada chat se divide en targetas sociales y de negocios
 	void mostrarChats() {
 		for(ContactosLocales c: contactosLocales) {
-			System.out.println(c.getEmail());
-			System.out.println("Targetas de Negocios");
+			System.out.println("email: " + c.getEmail());
+			System.out.println("Mensajes");
 			for (Mensaje m: c.getMensajes()) {
 				System.out.println(m);
 			}
