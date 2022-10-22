@@ -45,10 +45,10 @@ class Usuario {
 			opcion = sc.nextInt();
 			sc.nextLine();
 			
+			//VOYAQUI
 			//Revisa si se selecciono un contacto y se realiza en cambio.
 			if ((opcion > 0) && (opcion <= contactosPendientes.size())) {
-				crearTargeta(sc, contactosPendientes.get(opcion - 1));
-				contactosPendientes.remove(opcion - 1);
+				System.out.println(volverContactoLocal(opcion - 1));
 				
 			} else if (opcion != 0) {
 				System.out.println("Seleccione un numero entre 0 y " + contactosPendientes.size());
@@ -62,10 +62,19 @@ class Usuario {
 		
 	}
 	
+	//Depende del metodo empezarChat para optener el indice del contacto
+	//vuele un contacto pendiente en local
+	ContactosLocales volverContactoLocal(int indice) {
+		ContactosPendientes contactoP = contactosPendientes.remove(indice);
+		ContactosLocales contactoL = new ContactosLocales(contactoP.getNombre(), contactoP.getEmail(),
+				contactoP.getNombreCompleto());
+		return contactoL;
+	}
+	
 	//crea una targeta de negocios o social, segun la eleccion por consola.
 	//cambia un contacto pendiente a local.
 	//resive el contacto a cambiar y el unico escaner como argumentos.
-	void crearTargeta(Scanner sc, ContactosPendientes contactoP) {
+	/*void crearTargeta(Scanner sc, ContactosPendientes contactoP) {
 		int opcion;
 		String titulo;
 		String cuerpo;
@@ -103,7 +112,7 @@ class Usuario {
 		//por ultimo guarda en contacto local
 		contactosLocales.add(contactoL);
 		
-	}
+	}*/
 	
 	//Muestra los chat con cada contacto local
 	//Cada chat se divide en targetas sociales y de negocios

@@ -4,21 +4,22 @@ import java.util.Scanner;
 
 //Los contactos pendientes son personas con las que no se a iniciado un conversacion.
 class ContactosPendientes extends Contacto{
-	private final String targeta;
+	private final String mensajes;
 
 	//Crea el contacto sin mensajes
 	ContactosPendientes(String nombre, String email, String nombreCompleto) {
 		super(nombre, email, nombreCompleto);
-		this.targeta = "No hay mensajes";
+		this.mensajes = "No hay mensajes";
 	}
 
 	String getTargeta() {
-		return targeta;
+		return mensajes;
 	}
 	
 	@Override
+	//FIXME
 	public String toString() {
-		return super.toString() + "\nContactosPendientes [targeta=" + targeta + "]";
+		return super.toString() + "\nContactosPendientes [mensajes=" + mensajes + "]";
 	}
 
 	//TODO falta serializar

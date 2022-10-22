@@ -83,6 +83,7 @@ class ContactoUsuario extends Contacto{
 	}
 	
 	@Override
+	//FIXMEN
 	public String toString() {
 		return super.toString() + "\nContactoUsuario [logoNegocio=" + logoNegocio + ", descripcionNegocio=" 
 				+ descripcionNegocio + ", terminosNegocio=" + terminosNegocio + "]";

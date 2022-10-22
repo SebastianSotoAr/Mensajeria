@@ -21,10 +21,9 @@ public class Logica {
 	//Llama al metodo crear nuevo contacto de usuario.
 	public void crearNuevoContacto(Scanner sc) {
 		usuario.crearNuevoContacto(sc);
-		//FIXME solo esta para ver el funcionamiento
-		System.out.println(usuario);
 	}
 	
+	//VOYAQUI
 	//Llama al metodo empezar chat de usuario.
 	public void empezarChat(Scanner sc) {
 		usuario.empezarChat(sc);

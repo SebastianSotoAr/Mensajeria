@@ -29,10 +29,12 @@ public class Main {
 					break;
 					
 				case 2:
+					//TODO falta serializar
 					logica.crearNuevoContacto(sc);
 					break;
 					
 				case 3:
+					//VOYAQUI
 					logica.empezarChat(sc);
 					break;
 					
