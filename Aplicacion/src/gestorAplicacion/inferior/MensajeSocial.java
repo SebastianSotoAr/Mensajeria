@@ -1,6 +1,6 @@
-package gestorAplicacion.hija;
+package gestorAplicacion.inferior;
 
-import gestorAplicacion.padre.Mensaje;
+import gestorAplicacion.superior.Mensaje;
 
 //Son mensajes informales
 class MensajeSocial extends Mensaje{

@@ -1,8 +1,8 @@
-package gestorAplicacion.hija;
+package gestorAplicacion.inferior;
 
 import java.time.LocalDateTime;
 
-import gestorAplicacion.padre.FechaYHora;
+import gestorAplicacion.superior.FechaYHora;
 
 //Son los mensajes que el usuario se envia a si mismo
 class Notificacion implements FechaYHora {

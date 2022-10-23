@@ -1,30 +1,25 @@
-package gestorAplicacion.hija;
+package gestorAplicacion.inferior;
 
-import java.util.ArrayList;
-import gestorAplicacion.padre.Contacto;
-import gestorAplicacion.padre.Mensaje;
+import gestorAplicacion.superior.Contacto;
 
-//Los contactos locales son personas con las que ya se inicializo una convesacion
-class ContactosLocales extends Contacto{
-	private ArrayList<Mensaje> mensajes;
+//Los contactos pendientes son personas con las que no se a iniciado un conversacion.
+class ContactosPendientes extends Contacto{
+	private final String mensajes;
 
-	//Genera los contactos locales con la capacidad de resiver mensajes
-	ContactosLocales(String nombre, String email, String nombreCompleto) {
+	//Crea el contacto sin mensajes
+	ContactosPendientes(String nombre, String email, String nombreCompleto) {
 		super(nombre, email, nombreCompleto);
-		mensajes = new ArrayList<Mensaje>();
+		this.mensajes = "No hay mensajes";
 	}
 
-	ArrayList<Mensaje> getMensajes() {
+	String getTargeta() {
 		return mensajes;
 	}
-
-	void setMensajes(ArrayList<Mensaje> mensajes) {
-		this.mensajes = mensajes;
-	}
-
+	
 	@Override
+	//FIXME
 	public String toString() {
-		return super.toString();
+		return super.toString() + "\nContactosPendientes [mensajes=" + mensajes + "]";
 	}
 
 	@Override

@@ -1,7 +1,8 @@
 package uiMain;
 
 import java.util.Scanner;
-import gestorAplicacion.hija.Usuario;
+
+import gestorAplicacion.inferior.Usuario;
 
 public class ConexionUsuario {
 	public static Usuario usuario = new Usuario("Andres", "Andres@a.com", "Andres Alvarez Arcila",

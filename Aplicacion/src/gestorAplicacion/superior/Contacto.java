@@ -1,4 +1,4 @@
-package gestorAplicacion.padre;
+package gestorAplicacion.superior;
 
 //Todos los contactos tienen nombre, email y nombre completo
 public abstract class Contacto {

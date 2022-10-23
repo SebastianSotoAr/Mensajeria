@@ -1,4 +1,4 @@
-package gestorAplicacion.padre;
+package gestorAplicacion.superior;
 
 import java.time.format.DateTimeFormatter;
 

@@ -1,7 +1,8 @@
-package gestorAplicacion.hija;
+package gestorAplicacion.inferior;
 
 import java.util.ArrayList;
-import gestorAplicacion.padre.Mensaje;
+
+import gestorAplicacion.superior.Mensaje;
 
 //Descrive al usuario del programa
 public class Usuario {

@@ -1,7 +1,7 @@
 package uiMain;
 
 import java.util.Scanner;
-import gestorAplicacion.hija.ContactoUsuario;
+import gestorAplicacion.inferior.ContactoUsuario;
 
 public class ConexionContactoUsuario {
 	public static ContactoUsuario contactoUsuario = ConexionUsuario.usuario.getContactoUsuario();
