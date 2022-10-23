@@ -1,18 +1,27 @@
 package gestorAplicacion.hija;
 
+import java.time.LocalDateTime;
+
+import gestorAplicacion.padre.FechaYHora;
+
 //Son los mensajes que el usuario se envia a si mismo
-class Notificacion {
+class Notificacion implements FechaYHora {
+	final String fechaYHora;
 	String titulo;
 	String cuerpo;
 	
 	//La Notificacion tiene titulo y cuepo
 	Notificacion(String titulo, String cuerpo) {
-		super();
+		this.fechaYHora = fechaYHora();
 		this.titulo = titulo;
 		this.cuerpo = cuerpo;
 	}
 	
-	//FIXME
+	@Override
+	public String fechaYHora() {
+		return dtf.format(LocalDateTime.now());
+	}
+	
 	@Override
 	public String toString() {
 		return "Notificacion [titulo=" + titulo + ", cuerpo=" + cuerpo + "]";

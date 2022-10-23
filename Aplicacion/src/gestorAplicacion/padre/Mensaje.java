@@ -1,15 +1,24 @@
 package gestorAplicacion.padre;
 
-public abstract class Mensaje {
+import java.time.LocalDateTime;
+
+public abstract class Mensaje implements FechaYHora {
+	final String fechaYHora;
 	String titulo;
 	String cuerpo;
 		
 	protected Mensaje(String titulo, String cuerpo) {
 		super();
+		this.fechaYHora = fechaYHora();
 		this.titulo = titulo;
 		this.cuerpo = cuerpo;
 	}
 	
+	@Override
+	public String fechaYHora() {
+		return dtf.format(LocalDateTime.now());
+	}
+
 	@Override
 	public abstract String toString();
 
@@ -27,6 +36,10 @@ public abstract class Mensaje {
 
 	protected void setCuerpo(String cuerpo) {
 		this.cuerpo = cuerpo;
+	}
+
+	protected String getFechaYHora() {
+		return fechaYHora;
 	}
 	
 }
