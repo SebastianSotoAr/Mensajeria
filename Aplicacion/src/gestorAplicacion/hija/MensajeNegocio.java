@@ -22,9 +22,9 @@ class MensajeNegocio extends Mensaje{
 	}
 	
 	public String toString() {
-		return  "MensajeNegocios [titulo=" + this.getTitulo() + ", cuerpo=" + this.getCuerpo() 
-			+ ", logo=" + logo + ", descripcion=" + descripcion + ", termino=" + termino
-			+ ", nombreCompletoA=" + nombreCompletoA + ", nombreCompletoB=" 
+		return  "MensajeNegocios [fechaYHora= " + this.getFechaYHora() + ", titulo=" + this.getTitulo()
+			+ ", cuerpo=" + this.getCuerpo() + ", logo=" + logo + ", descripcion=" + descripcion 
+			+ ", termino=" + termino + ", nombreCompletoA=" + nombreCompletoA + ", nombreCompletoB=" 
 			+ nombreCompletoB + "]";
 	}
 

@@ -44,5 +44,9 @@ class Notificacion implements FechaYHora {
 	void setCuerpo(String cuerpo) {
 		this.cuerpo = cuerpo;
 	}
-		
+
+	String getFechaYHora() {
+		return fechaYHora;
+	}
+	
 }
