@@ -50,10 +50,10 @@ public class Usuario {
 	}
 	
 	//le agrega un mensaje social al contacto local recien creado
-	public void anadirMensajeSocial(String titulo, String cuerpo, String urgencia) {
+	public void anadirMensajeSocial(String titulo, String cuerpo) {
 		int l = contactosLocales.size() - 1;
 		contactosLocales.get(l).getMensajes().add(
-				new MensajeSocial(titulo, cuerpo, urgencia, contactoUsuario.getNombre(), contactosLocales.get(l).getNombre())
+				new MensajeSocial(titulo, cuerpo, contactoUsuario.getNombre(), contactosLocales.get(l).getNombre())
 		);
 	}
 	
@@ -67,9 +67,9 @@ public class Usuario {
 	}
 	
 	//le agrega un mensaje social al contacto local recien creado
-	public void anadirMensajeSocial(int i, String titulo, String cuerpo, String urgencia) {
+	public void anadirMensajeSocial(int i, String titulo, String cuerpo) {
 		contactosLocales.get(i).getMensajes().add(
-				new MensajeSocial(titulo, cuerpo, urgencia,contactoUsuario.getNombre(), contactosLocales.get(i).getNombre())
+				new MensajeSocial(titulo, cuerpo,contactoUsuario.getNombre(), contactosLocales.get(i).getNombre())
 		);
 	}
 	

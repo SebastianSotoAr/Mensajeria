@@ -4,16 +4,18 @@ import gestorAplicacion.superior.Mensaje;
 
 //Es un mensaje formal, tiene informacion sobre el negocio del usuario
 class MensajeNegocio extends Mensaje{
+	private String urgencia;
 	private String logo;
 	private String descripcion;
 	private String termino;
 	private String nombreCompletoA;
 	private String nombreCompletoB;
 	
-	//No permite crear mensajes con campos vacios
+	//No permite crear mensajes con campos vacios y cuanta con informacion sobre su urgencia
 	MensajeNegocio(String titulo, String cuerpo, String urgencia, String logo, String descripcion, String termino,
 			String nombreCompletoA, String nombreCompletoB) {
-		super(titulo, cuerpo, urgencia);
+		super(titulo, cuerpo);
+		this.urgencia = urgencia;
 		this.logo = logo;
 		this.descripcion = descripcion;
 		this.termino = termino;
@@ -23,7 +25,7 @@ class MensajeNegocio extends Mensaje{
 	
 	public String toString() {
 		return  "MensajeNegocios [fechaYHora= " + this.getFechaYHora() + ", titulo=" + this.getTitulo()
-			+ ", cuerpo=" + this.getCuerpo() + ", logo=" + logo + ", descripcion=" + descripcion 
+			+ ", cuerpo=" + this.getCuerpo() + ", urgencia=" + urgencia + ", logo=" + logo + ", descripcion=" + descripcion 
 			+ ", termino=" + termino + ", nombreCompletoA=" + nombreCompletoA + ", nombreCompletoB=" 
 			+ nombreCompletoB + "]";
 	}
@@ -66,6 +68,14 @@ class MensajeNegocio extends Mensaje{
 
 	void setNombreCompletoB(String nombreCompletoB) {
 		this.nombreCompletoB = nombreCompletoB;
+	}
+
+	String getUrgencia() {
+		return urgencia;
+	}
+
+	void setUrgencia(String urgencia) {
+		this.urgencia = urgencia;
 	}
 	
 }

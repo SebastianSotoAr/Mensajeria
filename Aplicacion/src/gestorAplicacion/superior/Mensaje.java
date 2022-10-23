@@ -2,14 +2,14 @@ package gestorAplicacion.superior;
 
 import java.time.LocalDateTime;
 
+//Todos los mensajes deben tener titulo y cuerpo
 public abstract class Mensaje implements FechaYHora {
 	final String fechaYHora;
 	String titulo;
 	String cuerpo;
-	String urgencia;
-		
-	protected Mensaje(String titulo, String cuerpo, String urgencia) {
-		super();
+	
+	//Crea el mensaje con fecha y hora de creaccion, titulo, y cuerpo
+	protected Mensaje(String titulo, String cuerpo) {
 		this.fechaYHora = fechaYHora();
 		this.titulo = titulo;
 		this.cuerpo = cuerpo;

@@ -8,15 +8,15 @@ class MensajeSocial extends Mensaje{
 	private String nombreB;
 	
 	//Crea mensaje con tilulo y cuerpo
-	MensajeSocial(String titulo, String cuerpo, String urgencia,String nombreA, String nombreB) {
-		super(titulo, cuerpo, urgencia);
+	MensajeSocial(String titulo, String cuerpo,String nombreA, String nombreB) {
+		super(titulo, cuerpo);
 		this.nombreA = nombreA;
 		this.nombreB = nombreB;
 	}
 	
 	//Crea mensajes por default
 	MensajeSocial( String nombreA, String nombreB) {
-		this("sin titulo", "sin cuerpo", "", nombreA, nombreB);
+		this("sin titulo", "sin cuerpo", nombreA, nombreB);
 	}
 	
 	@Override

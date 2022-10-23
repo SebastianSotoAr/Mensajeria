@@ -10,7 +10,7 @@ class Notificacion implements FechaYHora {
 	String cuerpo;
 	String urgencia;
 	
-	//La Notificacion tiene titulo y cuepo
+	//La Notificacion tiene fecha y hora de creacion, titulo, cuerpo y urgencia
 	Notificacion(String titulo, String cuerpo, String urgencia) {
 		this.fechaYHora = fechaYHora();
 		this.titulo = titulo;
@@ -25,10 +25,8 @@ class Notificacion implements FechaYHora {
 	
 	@Override
 	public String toString() {
-		return "Notificacion [titulo=" + titulo + ", cuerpo=" + cuerpo + "]";
+		return "Notificacion [titulo=" + titulo + ", cuerpo=" + cuerpo + ", urgencia=" + urgencia + "]";
 	}
-
-
 
 	String getTitulo() {
 		return titulo;
@@ -48,6 +46,14 @@ class Notificacion implements FechaYHora {
 
 	String getFechaYHora() {
 		return fechaYHora;
+	}
+
+	String getUrgencia() {
+		return urgencia;
+	}
+
+	void setUrgencia(String urgencia) {
+		this.urgencia = urgencia;
 	}
 	
 }
