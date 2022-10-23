@@ -1,7 +1,6 @@
 package gestorAplicacion.inferior;
 
 import java.util.ArrayList;
-
 import gestorAplicacion.superior.Mensaje;
 
 //Descrive al usuario del programa
@@ -41,36 +40,36 @@ public class Usuario {
 	}
 	
 	//le agrega un mensaje de negocios al contacto local recien creado
-	public void anadirMensajeNegocio(String titulo, String cuerpo) {
+	public void anadirMensajeNegocio(String titulo, String cuerpo, String urgencia) {
 		int l = contactosLocales.size() - 1;
 		contactosLocales.get(l).getMensajes().add(
-			new MensajeNegocio(titulo, cuerpo, contactoUsuario.getLogoNegocio(),
+			new MensajeNegocio(titulo, cuerpo, urgencia,contactoUsuario.getLogoNegocio(),
 					contactoUsuario.getDescripcionNegocio(), contactoUsuario.getTerminosNegocio(),
 					contactoUsuario.getNombreCompleto(), contactosLocales.get(l).getNombreCompleto())
 		);
 	}
 	
 	//le agrega un mensaje social al contacto local recien creado
-	public void anadirMensajeSocial(String titulo, String cuerpo) {
+	public void anadirMensajeSocial(String titulo, String cuerpo, String urgencia) {
 		int l = contactosLocales.size() - 1;
 		contactosLocales.get(l).getMensajes().add(
-				new MensajeSocial(titulo, cuerpo, contactoUsuario.getNombre(), contactosLocales.get(l).getNombre())
+				new MensajeSocial(titulo, cuerpo, urgencia, contactoUsuario.getNombre(), contactosLocales.get(l).getNombre())
 		);
 	}
 	
 	//le agrega un mensaje de negocios al contacto local recien creado
-	public void anadirMensajeNegocio(int i, String titulo, String cuerpo) {
+	public void anadirMensajeNegocio(int i, String titulo, String cuerpo, String urgencia) {
 		contactosLocales.get(i).getMensajes().add(
-			new MensajeNegocio(titulo, cuerpo, contactoUsuario.getLogoNegocio(),
+			new MensajeNegocio(titulo, cuerpo, urgencia,contactoUsuario.getLogoNegocio(),
 					contactoUsuario.getDescripcionNegocio(), contactoUsuario.getTerminosNegocio(),
 					contactoUsuario.getNombreCompleto(), contactosLocales.get(i).getNombreCompleto())
 		);
 	}
 	
 	//le agrega un mensaje social al contacto local recien creado
-	public void anadirMensajeSocial(int i, String titulo, String cuerpo) {
+	public void anadirMensajeSocial(int i, String titulo, String cuerpo, String urgencia) {
 		contactosLocales.get(i).getMensajes().add(
-				new MensajeSocial(titulo, cuerpo, contactoUsuario.getNombre(), contactosLocales.get(i).getNombre())
+				new MensajeSocial(titulo, cuerpo, urgencia,contactoUsuario.getNombre(), contactosLocales.get(i).getNombre())
 		);
 	}
 	

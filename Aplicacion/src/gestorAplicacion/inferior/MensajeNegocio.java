@@ -11,9 +11,9 @@ class MensajeNegocio extends Mensaje{
 	private String nombreCompletoB;
 	
 	//No permite crear mensajes con campos vacios
-	MensajeNegocio(String titulo, String cuerpo, String logo, String descripcion, String termino,
+	MensajeNegocio(String titulo, String cuerpo, String urgencia, String logo, String descripcion, String termino,
 			String nombreCompletoA, String nombreCompletoB) {
-		super(titulo, cuerpo);
+		super(titulo, cuerpo, urgencia);
 		this.logo = logo;
 		this.descripcion = descripcion;
 		this.termino = termino;

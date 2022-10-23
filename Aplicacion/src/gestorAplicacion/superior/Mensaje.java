@@ -6,8 +6,9 @@ public abstract class Mensaje implements FechaYHora {
 	final String fechaYHora;
 	String titulo;
 	String cuerpo;
+	String urgencia;
 		
-	protected Mensaje(String titulo, String cuerpo) {
+	protected Mensaje(String titulo, String cuerpo, String urgencia) {
 		super();
 		this.fechaYHora = fechaYHora();
 		this.titulo = titulo;

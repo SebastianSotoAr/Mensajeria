@@ -1,7 +1,6 @@
 package gestorAplicacion.inferior;
 
 import java.util.ArrayList;
-
 import gestorAplicacion.superior.Contacto;
 
 //Contacto del Usuario guarda sus datos y sus notificaciones
@@ -22,8 +21,8 @@ public class ContactoUsuario extends Contacto{
 	}
 	
 	//agrega una nueva notificacion al Contacto de Usuario
-	public void anadirNotificaciones(String titulo, String cuerpo) {
-		notificaciones.add(new Notificacion(titulo, cuerpo));
+	public void anadirNotificaciones(String titulo, String cuerpo, String urgencia) {
+		notificaciones.add(new Notificacion(titulo, cuerpo, urgencia));
 	}
 	
 	//FIXME

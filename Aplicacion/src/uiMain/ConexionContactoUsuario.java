@@ -71,6 +71,7 @@ public class ConexionContactoUsuario {
 		int opcion;
 		String titulo;
 		String cuerpo;
+		String urgencia;
 		do {
 			System.out.println("Notificaciones: ");
 			for(Object n: contactoUsuario.getNotificaciones()) {
@@ -90,7 +91,8 @@ public class ConexionContactoUsuario {
 					titulo = sc.nextLine();
 					System.out.print("cuerpo: ");
 					cuerpo = sc.nextLine();
-					contactoUsuario.anadirNotificaciones(titulo, cuerpo);
+					urgencia = ConexionUsuario.conexionUrgencia(sc);
+					contactoUsuario.anadirNotificaciones(titulo, cuerpo, urgencia);
 						
 				default:
 					System.out.println("Seleccione un numero entre 0 o 1");

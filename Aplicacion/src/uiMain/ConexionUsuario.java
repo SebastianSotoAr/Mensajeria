@@ -2,6 +2,7 @@ package uiMain;
 
 import java.util.Scanner;
 
+import gestorAplicacion.inferior.Urgencia;
 import gestorAplicacion.inferior.Usuario;
 
 public class ConexionUsuario {
@@ -23,8 +24,51 @@ public class ConexionUsuario {
 		
 	}
 	
-	//TODO falta serializar
-		//Permite seleccionar un contacto para iniciar una conversacion.
+	//Permite al usuario elegir el tipo de urgencia
+	public static String conexionUrgencia(Scanner sc) {
+		int opcion;
+		String urg = "";
+		do {
+			System.out.println("Tipo de Urgencia:");
+			System.out.println("Opciones:\n\t1 riesgoVital\n\t2 muyUrgente\n\t2 urgente"
+					+ "\n\t4 normal\n\t5 noUrgente");
+			System.out.print("\nTipo: ");
+			opcion = sc.nextInt();
+			sc.nextLine();
+			
+			
+			switch (opcion) {
+				case 1:
+					urg = Urgencia.RIESGO_VITAL.getAtencion();
+					break;
+					
+				case 2:
+					urg = Urgencia.MUY_URGENTE.getAtencion();
+					break;
+					
+				case 3:
+					urg = Urgencia.URGENTE.getAtencion();
+					break;
+					
+				case 4:
+					urg = Urgencia.NORMAL.getAtencion();
+					break;
+					
+				case 5:
+					urg = Urgencia.NO_URGENTE.getAtencion();
+					break;
+					
+				default:
+					opcion = 0;
+					System.out.println("\tSeleccione un numero entre 1 y 5");
+					break;	
+			}
+			
+		}while (opcion != 0);
+		return urg;
+	}
+	
+	//Permite seleccionar un contacto para iniciar una conversacion.
 	public void empezarChat(Scanner sc) {
 		int opcion;
 		do {
@@ -60,10 +104,12 @@ public class ConexionUsuario {
 		int opcion;
 		String titulo;
 		String cuerpo;
+		String urgencia;
 		System.out.print("Titulo: ");
 		titulo = sc.nextLine();
 		System.out.print("Cuerpo: ");
 		cuerpo = sc.nextLine();
+		urgencia = conexionUrgencia(sc);
 		System.out.println("Elige el tipo de mensaje:\n0 negocios\n1 Social");
 		opcion = sc.nextInt();
 		sc.nextLine();
@@ -71,12 +117,12 @@ public class ConexionUsuario {
 			switch (opcion) {
 				case 0:
 					//crea y añade un mesaje de negocios al contacto recien creado
-					usuario.anadirMensajeNegocio(titulo, cuerpo);
+					usuario.anadirMensajeNegocio(titulo, cuerpo, urgencia);
 					break;
 					
 				case 1:
 					//crea y añade un mesaje social al contacto recien creado
-					usuario.anadirMensajeSocial(titulo, cuerpo);
+					usuario.anadirMensajeSocial(titulo, cuerpo, urgencia);
 					break;
 					
 				default:
@@ -126,10 +172,12 @@ public class ConexionUsuario {
 		int opcion;
 		String titulo;
 		String cuerpo;
+		String urgencia;
 		System.out.print("Titulo: ");
 		titulo = sc.nextLine();
 		System.out.print("Cuerpo: ");
 		cuerpo = sc.nextLine();
+		urgencia = conexionUrgencia(sc);
 		System.out.println("Elige el tipo de mensaje:\n0 negocios\n1 Social");
 		opcion = sc.nextInt();
 		sc.nextLine();
@@ -137,12 +185,12 @@ public class ConexionUsuario {
 			switch (opcion) {
 				case 0:
 					//crea y añade un mesaje de negocios al contacto recien creado
-					usuario.anadirMensajeNegocio(i, titulo, cuerpo);
+					usuario.anadirMensajeNegocio(i, titulo, cuerpo, urgencia);
 					break;
 					
 				case 1:
 					//crea y añade un mesaje social al contacto recien creado
-					usuario.anadirMensajeSocial(i, titulo, cuerpo);
+					usuario.anadirMensajeSocial(i, titulo, cuerpo, urgencia);
 					break;
 					
 				default:

@@ -1,7 +1,6 @@
 package gestorAplicacion.inferior;
 
 import java.util.ArrayList;
-
 import gestorAplicacion.superior.Contacto;
 import gestorAplicacion.superior.Mensaje;
 
