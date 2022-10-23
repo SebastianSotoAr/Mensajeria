@@ -1,5 +1,8 @@
-package Logica;
+package gestorAplicacion.hija;
 
+import gestorAplicacion.padre.Mensaje;
+
+//Son mensajes informales
 class MensajeSocial extends Mensaje{
 	private String nombreA;
 	private String nombreB;

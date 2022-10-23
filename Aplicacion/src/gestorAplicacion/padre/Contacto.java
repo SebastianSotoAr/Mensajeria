@@ -1,7 +1,7 @@
-package Logica;
+package gestorAplicacion.padre;
 
 //Todos los contactos tienen nombre, email y nombre completo
-abstract class Contacto {
+public abstract class Contacto {
 	private String nombre;
 	private String email;
 	private String nombreCompleto;

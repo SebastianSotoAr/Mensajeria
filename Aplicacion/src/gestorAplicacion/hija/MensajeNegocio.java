@@ -1,5 +1,8 @@
-package Logica;
+package gestorAplicacion.hija;
 
+import gestorAplicacion.padre.Mensaje;
+
+//Es un mensaje formal, tiene informacion sobre el negocio del usuario
 class MensajeNegocio extends Mensaje{
 	private String logo;
 	private String descripcion;
@@ -7,6 +10,7 @@ class MensajeNegocio extends Mensaje{
 	private String nombreCompletoA;
 	private String nombreCompletoB;
 	
+	//No permite crear mensajes con campos vacios
 	MensajeNegocio(String titulo, String cuerpo, String logo, String descripcion, String termino,
 			String nombreCompletoA, String nombreCompletoB) {
 		super(titulo, cuerpo);

@@ -1,6 +1,6 @@
-package Logica;
+package gestorAplicacion.padre;
 
-abstract class Mensaje {
+public abstract class Mensaje {
 	String titulo;
 	String cuerpo;
 		

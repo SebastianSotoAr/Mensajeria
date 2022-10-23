@@ -1,9 +1,11 @@
-package Logica;
+package gestorAplicacion.hija;
 
+//Son los mensajes que el usuario se envia a si mismo
 class Notificacion {
 	String titulo;
 	String cuerpo;
 	
+	//La Notificacion tiene titulo y cuepo
 	Notificacion(String titulo, String cuerpo) {
 		super();
 		this.titulo = titulo;
