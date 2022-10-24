@@ -1,6 +1,5 @@
 package gestorAplicacion.inferior;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +8,7 @@ import gestorAplicacion.superior.Contacto;
 import uiMain.ConexionUsuario;
 
 //Contacto del Usuario guarda sus datos y sus notificaciones
-public class ContactoUsuario extends Contacto implements Serializable {
+public class ContactoUsuario extends Contacto {
 	private String logoNegocio;
 	private String descripcionNegocio;
 	private String terminosNegocio;

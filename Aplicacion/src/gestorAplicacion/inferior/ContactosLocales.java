@@ -1,14 +1,12 @@
 package gestorAplicacion.inferior;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
 import gestorAplicacion.superior.Contacto;
 import gestorAplicacion.superior.Mensaje;
 
 //Los contactos locales son personas con las que ya se inicializo una convesacion
-class ContactosLocales extends Contacto implements Serializable {
+class ContactosLocales extends Contacto {
 	private List<Mensaje> mensajes;
 
 	//Genera los contactos locales con la capacidad de resiver mensajes

@@ -1,11 +1,9 @@
 package gestorAplicacion.inferior;
 
-import java.io.Serializable;
-
 import gestorAplicacion.superior.Contacto;
 
 //Los contactos pendientes son personas con las que no se a iniciado un conversacion.
-class ContactosPendientes extends Contacto implements Serializable {
+public class ContactosPendientes extends Contacto {
 	private final String mensajes;
 
 	//Crea el contacto sin mensajes

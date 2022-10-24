@@ -1,13 +1,12 @@
 package gestorAplicacion.inferior;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import gestorAplicacion.superior.Mensaje;
 import baseDatos.Deserializador;
 
 //Descrive al usuario del programa
-public class Usuario implements Serializable {
+public class Usuario {
 	private ContactoUsuario contactoUsuario;
 	private List<ContactosLocales> contactosLocales;
 	private List<ContactosPendientes> contactosPendientes;

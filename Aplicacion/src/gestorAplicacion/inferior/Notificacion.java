@@ -1,11 +1,10 @@
 package gestorAplicacion.inferior;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 import gestorAplicacion.superior.FechaYHora;
 
 //Son los mensajes que el usuario se envia a si mismo
-public class Notificacion implements FechaYHora, Serializable {
+public class Notificacion implements FechaYHora {
 	final String fechaYHora;
 	String titulo;
 	String cuerpo;

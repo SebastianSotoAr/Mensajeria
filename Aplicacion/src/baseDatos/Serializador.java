@@ -6,12 +6,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
-import gestorAplicacion.inferior.ContactoUsuario;
 
 public class Serializador {
 	private static File rutaTemp = new File("src\\baseDatos\\temp");
 
-	public static void serializar(ContactoUsuario contactoUsuario) {
+	public static void serializar (DatosContactoUsuario datosContactoUsuario) {
 		FileOutputStream fos;
 		ObjectOutputStream oos;
 		File[] docs = rutaTemp.listFiles();
@@ -28,11 +27,11 @@ public class Serializador {
 		
 		for (File file : docs) {
 			
-			if(file.getAbsolutePath().contains("notificaciones")) {
+			if(file.getAbsolutePath().contains("datosContactoUsuario")) {
 				try {
 					fos = new FileOutputStream(file);
 					oos = new ObjectOutputStream(fos);
-					oos.writeObject(contactoUsuario.getNotificaciones());
+					oos.writeObject(datosContactoUsuario);
 					
 				} catch(FileNotFoundException e) {
 					e.printStackTrace();

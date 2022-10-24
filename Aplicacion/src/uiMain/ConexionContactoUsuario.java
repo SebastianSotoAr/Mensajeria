@@ -1,10 +1,13 @@
 package uiMain;
 
 import java.util.Scanner;
+
+import baseDatos.DatosContactoUsuario;
 import gestorAplicacion.inferior.ContactoUsuario;
+import gestorAplicacion.inferior.Usuario;
 
 public class ConexionContactoUsuario {
-	public static ContactoUsuario contactoUsuario = ConexionUsuario.usuario.getContactoUsuario();
+	public static ContactoUsuario contactoUsuario;
 	
 	//Cambia los atributos del contacto de usuario, menos notificaciones
 	public void editarPerfil(Scanner sc) {
@@ -100,6 +103,22 @@ public class ConexionContactoUsuario {
 			}
 		}while (opcion != 0);
 		
+	}
+	
+	public static void cargarContactoUsuario() {
+		DatosContactoUsuario.cargarContactoUsuario();
+		DatosContactoUsuario datos = DatosContactoUsuario.datos;
+		ConexionUsuario.usuario = new Usuario(datos.getNombre(), datos.getEmail(), 
+				datos.getNombreCompleto(), datos.getLogoNegocio(), datos.getDescripcionNegocio(),
+				datos.getTerminosNegocio());
+		contactoUsuario = ConexionUsuario.usuario.getContactoUsuario();
+	}
+	
+	public static void guardarContactoUsuario() {
+		DatosContactoUsuario.guardarContactoUsuario(contactoUsuario.getNombre(),
+				contactoUsuario.getEmail(), contactoUsuario.getNombreCompleto(),
+				contactoUsuario.getLogoNegocio(), contactoUsuario.getDescripcionNegocio(),
+				contactoUsuario.getTerminosNegocio());
 	}
 
 }

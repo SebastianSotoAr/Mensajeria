@@ -6,8 +6,7 @@ import gestorAplicacion.inferior.Urgencia;
 import gestorAplicacion.inferior.Usuario;
 
 public class ConexionUsuario {
-	public static Usuario usuario = new Usuario("nombre", "email", "nombreCompleto", "logo",
-			"descripcion", "terminos");
+	public static Usuario usuario;
 	
 	//Permite al Usuario crear un contacto de este tipo por consola.
 	public void crearNuevoContacto(Scanner sc) {
