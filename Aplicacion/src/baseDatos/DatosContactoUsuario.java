@@ -26,13 +26,11 @@ public class DatosContactoUsuario implements Serializable{
 			String logoNegocio, String descripcionNegocio, String terminosNegocio) {
 		DatosContactoUsuario datos = new DatosContactoUsuario(nombre, email, nombreCompleto, logoNegocio, 
 				descripcionNegocio, terminosNegocio);
-		System.out.println(datos);
 		Serializador.serializar(datos);
 	}
 	
 	public static void cargarContactoUsuario( ) {
 		Deserializador.deserializar();
-		System.out.println(datos);
 	}
 
 	public String getNombre() {

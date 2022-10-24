@@ -5,12 +5,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.util.List;
-import gestorAplicacion.inferior.ContactoUsuario;
-import gestorAplicacion.inferior.Notificacion;
 
 public class Deserializador {
-	public static File rutaTemp = new File("src\\baseDastos\\temp");
+	public static File rutaTemp = new File("src\\baseDatos\\temp");
 
 	public static void deserializar() {
 		File[] docs = rutaTemp.listFiles();

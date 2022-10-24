@@ -32,6 +32,7 @@ public class Serializador {
 					fos = new FileOutputStream(file);
 					oos = new ObjectOutputStream(fos);
 					oos.writeObject(datosContactoUsuario);
+					oos.close();
 					
 				} catch(FileNotFoundException e) {
 					e.printStackTrace();

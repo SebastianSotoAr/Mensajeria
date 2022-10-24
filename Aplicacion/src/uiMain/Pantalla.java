@@ -8,9 +8,6 @@ import gestorAplicacion.inferior.Usuario;
 public class Pantalla {
 
 	public static void main(String[] args) {
-		/*ConexionUsuario.usuario = new Usuario("nombre", "email", "nombreCompleto", "logo",
-				"descripcion", "terminos");
-		ConexionContactoUsuario.contactoUsuario = ConexionUsuario.usuario.getContactoUsuario();*/
 		ConexionContactoUsuario.cargarContactoUsuario();
 		Scanner sc = new Scanner(System.in);
 		ConexionContactoUsuario ccu = new ConexionContactoUsuario();
