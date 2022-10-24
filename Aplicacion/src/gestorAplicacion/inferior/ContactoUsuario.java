@@ -1,14 +1,19 @@
 package gestorAplicacion.inferior;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
+
+import baseDatos.Deserializador;
 import gestorAplicacion.superior.Contacto;
+import uiMain.ConexionUsuario;
 
 //Contacto del Usuario guarda sus datos y sus notificaciones
-public class ContactoUsuario extends Contacto{
+public class ContactoUsuario extends Contacto implements Serializable {
 	private String logoNegocio;
 	private String descripcionNegocio;
 	private String terminosNegocio;
-	private ArrayList<Notificacion> notificaciones;
+	private List<Notificacion> notificaciones;
 	
 	//Guarda la informacion del Usuario
 	public ContactoUsuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
@@ -56,11 +61,11 @@ public class ContactoUsuario extends Contacto{
 		this.terminosNegocio = terminosNegocio;
 	}
 
-	public ArrayList<Notificacion> getNotificaciones() {
+	public List<Notificacion> getNotificaciones() {
 		return notificaciones;
 	}
 
-	public void setNotificaciones(ArrayList<Notificacion> notificaciones) {
+	public void setNotificaciones(List<Notificacion> notificaciones) {
 		this.notificaciones = notificaciones;
 	}
 

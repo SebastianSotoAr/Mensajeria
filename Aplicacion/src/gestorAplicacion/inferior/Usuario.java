@@ -1,13 +1,16 @@
 package gestorAplicacion.inferior;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 import gestorAplicacion.superior.Mensaje;
+import baseDatos.Deserializador;
 
 //Descrive al usuario del programa
-public class Usuario {
+public class Usuario implements Serializable {
 	private ContactoUsuario contactoUsuario;
-	private ArrayList<ContactosLocales> contactosLocales;
-	private ArrayList<ContactosPendientes> contactosPendientes;
+	private List<ContactosLocales> contactosLocales;
+	private List<ContactosPendientes> contactosPendientes;
 
 	//Genera al Usuario y crea su ContactoUsuario
 	public Usuario(String nombre, String email, String nombreCompleto, String logoNegocio, String descripcionNegocio,
@@ -105,19 +108,19 @@ public class Usuario {
 		this.contactoUsuario = contactoUsuario;
 	}
 
-	public ArrayList<ContactosLocales> getContactosLocales() {
+	public List<ContactosLocales> getContactosLocales() {
 		return contactosLocales;
 	}
 
-	public void setContactosLocales(ArrayList<ContactosLocales> contactosLocales) {
+	public void setContactosLocales(List<ContactosLocales> contactosLocales) {
 		this.contactosLocales = contactosLocales;
 	}
 
-	public ArrayList<ContactosPendientes> getContactosPendientes() {
+	public List<ContactosPendientes> getContactosPendientes() {
 		return contactosPendientes;
 	}
 
-	public void setContactosPendientes(ArrayList<ContactosPendientes> contactosPendientes) {
+	public void setContactosPendientes(List<ContactosPendientes> contactosPendientes) {
 		this.contactosPendientes = contactosPendientes;
 	}
 		

@@ -1,9 +1,11 @@
 package gestorAplicacion.inferior;
 
+import java.io.Serializable;
+
 import gestorAplicacion.superior.Mensaje;
 
 //Son mensajes informales
-class MensajeSocial extends Mensaje{
+class MensajeSocial extends Mensaje implements Serializable {
 	private String nombreA;
 	private String nombreB;
 	

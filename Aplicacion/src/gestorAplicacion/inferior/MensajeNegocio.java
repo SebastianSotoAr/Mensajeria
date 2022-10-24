@@ -1,9 +1,11 @@
 package gestorAplicacion.inferior;
 
+import java.io.Serializable;
+
 import gestorAplicacion.superior.Mensaje;
 
 //Es un mensaje formal, tiene informacion sobre el negocio del usuario
-class MensajeNegocio extends Mensaje{
+class MensajeNegocio extends Mensaje implements Serializable {
 	private String urgencia;
 	private String logo;
 	private String descripcion;
