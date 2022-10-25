@@ -25,7 +25,7 @@ class Notificacion implements FechaYHora {
 	
 	@Override
 	public String toString() {
-		return "\tNotificacion [\n\t\tTitulo: " + titulo + "\n\t\tCuerpo: " + cuerpo + "\n\t\tUrgencia: " + urgencia + "\n]";
+		return "\tNotificacion [\n\tFecha y Hora: " + fechaYHora + "\n\t\tTitulo: " + titulo + "\n\t\tCuerpo: " + cuerpo + "\n\t\tUrgencia: " + urgencia + "\n]";
 	}
 
 	String getTitulo() {

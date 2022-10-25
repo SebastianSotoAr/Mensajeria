@@ -30,7 +30,7 @@ public class ConexionUsuario {
 		String urg = "";
 		do {
 			System.out.println("Tipo de Urgencia:");
-			System.out.println("\tOpciones:\n\t\t1 Riesgo Vital\n\t\t2 Muy Urgente\n\t\t2 Urgente"
+			System.out.println("\tOpciones:\n\t\t1 Riesgo Vital\n\t\t2 Muy Urgente\n\t\t3 Urgente"
 					+ "\n\t\t4 Normal\n\t\t5 No Urgente");
 			System.out.print("\t\nTipo: ");
 			opcion = sc.nextInt();
@@ -184,6 +184,7 @@ public class ConexionUsuario {
 		System.out.print("Cuerpo: ");
 		cuerpo = sc.nextLine();
 		System.out.println("Elige el tipo de mensaje:\n0 negocios\n1 Social");
+		System.out.print("\nOpcion: ");
 		opcion = sc.nextInt();
 		sc.nextLine();
 		do {

@@ -85,6 +85,7 @@ public class ConexionContactoUsuario {
 				System.out.println(n);
 			}
 			System.out.println("\nCrear una nueva:\n\t0 No\n\t1 Si");
+			System.out.print("\nOpcion: ");
 			opcion = sc.nextInt();
 			sc.nextLine();
 				

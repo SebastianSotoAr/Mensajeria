@@ -3,7 +3,7 @@ package gestorAplicacion.inferior;
 import gestorAplicacion.superior.Contacto;
 
 //Los contactos pendientes son personas con las que no se a iniciado un conversacion.
-public class ContactosPendientes extends Contacto {
+class ContactosPendientes extends Contacto {
 	private final String mensajes;
 
 	//Crea el contacto sin mensajes
