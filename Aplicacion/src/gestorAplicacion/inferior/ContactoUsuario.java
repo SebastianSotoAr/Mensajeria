@@ -32,8 +32,9 @@ public class ContactoUsuario extends Contacto {
 	//FIXME
 	@Override
 	public String toString() {
-		return super.toString() + "\nContactoUsuario [logoNegocio=" + logoNegocio + ", descripcionNegocio=" 
-				+ descripcionNegocio + ", terminosNegocio=" + terminosNegocio + "]";
+		return super.toString() + "\nTipo: ContactoUsuario [\n\tLogo del Negocio: " + logoNegocio 
+				+ "\n\tDescripcion del Negocio: " + descripcionNegocio + "\n\tTerminos del Negocio: " 
+				+ terminosNegocio + "\n]";
 	}
 
 	public String getLogoNegocio() {

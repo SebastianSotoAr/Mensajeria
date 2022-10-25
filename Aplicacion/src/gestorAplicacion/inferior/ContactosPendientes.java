@@ -51,5 +51,9 @@ public class ContactosPendientes extends Contacto {
 	protected void setNombreCompleto(String nombreCompleto) {
 		super.setNombreCompleto(nombreCompleto);
 	}
+
+	public String getMensajes() {
+		return mensajes;
+	}
 	
 }

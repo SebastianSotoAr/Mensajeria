@@ -14,10 +14,11 @@ public class Pantalla {
 		ConexionUsuario cu = new ConexionUsuario();
 		int opcion;
 		do {
-			System.out.println("Programa");
-			System.out.println("Opciones:\n\t0 salir\n\t1 modificarPerfil\n\t2 agregarContacto"
-					+ "\n\t3 empezarConversacion\n\t4 mostrarChats\n\t5 seguirConversacion"
-					+ "\n\t6 verNotificaciones");
+			System.out.println("Programa de Mensajeria");
+			System.out.println("Opciones:\n\t0 Salir del Programa\n\t1 Editar Perfil"
+					+ "\n\t2 Agregar un Nuevo Contacto\n\t3 Empezar una Conversacion"
+					+ "\n\t4 Mostrar Chats\n\t5 Seguir una Conversacion"
+					+ "\n\t6 Ver Notificaciones de Usuario");
 			System.out.print("\nOpcion: ");
 			opcion = sc.nextInt();
 			sc.nextLine();
@@ -25,7 +26,7 @@ public class Pantalla {
 			
 			switch (opcion) {
 				case 0:
-					System.out.println("Fin del programa");
+					System.out.println("\nFin del Programa");
 					break;
 					
 				case 1:

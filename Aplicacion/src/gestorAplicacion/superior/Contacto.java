@@ -16,7 +16,7 @@ public abstract class Contacto {
 	//Muetra describe el contacto
 	@Override
 	public String toString() {
-		return "Contacto [nombre=" + nombre + ", email=" + email + ", nombreCompleto=" + nombreCompleto + "]";
+		return "Contacto [\n\tNombre: " + nombre + "\n\tEmail: " + email + "\n\tNombre Completo: " + nombreCompleto + "\n]";
 	}
 
 	protected String getNombre() {
