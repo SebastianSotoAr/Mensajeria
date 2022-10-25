@@ -2,6 +2,7 @@ package baseDatos;
 
 import java.io.Serializable;
 
+//Guarda los datos del contacto usuario
 public class DatosContactoUsuario implements Serializable{
 	private String nombre;
 	private String email;
@@ -12,6 +13,7 @@ public class DatosContactoUsuario implements Serializable{
 	
 	public static DatosContactoUsuario datos;
 	
+	//Guarda los datos en una instacia
 	public DatosContactoUsuario(String nombre, String email, String nombreCompleto, String logoNegocio,
 			String descripcionNegocio, String terminosNegocio) {
 		this.nombre = nombre;
@@ -22,6 +24,7 @@ public class DatosContactoUsuario implements Serializable{
 		this.terminosNegocio = terminosNegocio;
 	}
 	
+	//serializa el DatosContactoUsuario
 	public static void guardarContactoUsuario(String nombre, String email, String nombreCompleto, 
 			String logoNegocio, String descripcionNegocio, String terminosNegocio) {
 		DatosContactoUsuario datos = new DatosContactoUsuario(nombre, email, nombreCompleto, logoNegocio, 
@@ -29,6 +32,7 @@ public class DatosContactoUsuario implements Serializable{
 		Serializador.serializar(datos);
 	}
 	
+	//deserializa el DatosContactoUsuario
 	public static void cargarContactoUsuario( ) {
 		Deserializador.deserializar();
 	}

@@ -17,7 +17,7 @@ public class ConexionUsuario {
 		String nombre = sc.nextLine();
 		System.out.print("\tEmail: ");
 		String email = sc.next();
-		sc.nextLine();
+		sc.nextLine();//Elimina el \n del scanner
 		System.out.print("\tNombre completo: ");
 		String nombreCompleto = sc.nextLine();
 		usuario.crearNuevoContacto(nombre, email, nombreCompleto);
@@ -34,7 +34,7 @@ public class ConexionUsuario {
 					+ "\n\t\t4 Normal\n\t\t5 No Urgente");
 			System.out.print("\t\nTipo: ");
 			opcion = sc.nextInt();
-			sc.nextLine();
+			sc.nextLine();//Elimina el \n del scanner
 			
 			
 			switch (opcion) {
@@ -82,7 +82,7 @@ public class ConexionUsuario {
 			}
 			System.out.print("Opcion: ");
 			opcion = sc.nextInt();
-			sc.nextLine();
+			sc.nextLine();//Elimina el \n del scanner
 			
 			//Revisa si se selecciono un contacto y se realiza en cambio.
 			if ((opcion > 0) && (opcion <= usuario.getContactosPendientes().size())) {
@@ -115,7 +115,7 @@ public class ConexionUsuario {
 		System.out.println("Elige el tipo de mensaje:\n\t0 Negocios\n\t1 Social");
 		System.out.print("\nOpcion: ");
 		opcion = sc.nextInt();
-		sc.nextLine();
+		sc.nextLine();//Elimina el \n del scanner
 		do {
 			switch (opcion) {
 				case 0:
@@ -156,7 +156,7 @@ public class ConexionUsuario {
 			}
 			System.out.print("Opcion: ");
 			opcion = sc.nextInt();
-			sc.nextLine();
+			sc.nextLine();//Elimina el \n del scanner
 			
 			//Revisa si se selecciono un contacto y se realiza en cambio.
 			if ((opcion > 0) && (opcion <= usuario.getContactosLocales().size())) {
@@ -186,7 +186,7 @@ public class ConexionUsuario {
 		System.out.println("Elige el tipo de mensaje:\n0 negocios\n1 Social");
 		System.out.print("\nOpcion: ");
 		opcion = sc.nextInt();
-		sc.nextLine();
+		sc.nextLine();//Elimina el \n del scanner
 		do {
 			switch (opcion) {
 				case 0:

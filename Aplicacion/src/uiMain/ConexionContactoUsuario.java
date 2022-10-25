@@ -20,7 +20,7 @@ public class ConexionContactoUsuario {
 					+ "\n\t5 Editar Descripcion del Negocio\n\t6 Editar Terminos del Negocio");
 			System.out.print("\nOpcion: ");
 			opcion = sc.nextInt();
-			sc.nextLine();
+			sc.nextLine();//Elimina el \n del scanner
 				
 			switch (opcion) {
 				case 0:
@@ -37,7 +37,7 @@ public class ConexionContactoUsuario {
 					System.out.println("\nEmail actual: " + contactoUsuario.getEmail());
 					System.out.print("Nuevo Email: ");
 					contactoUsuario.setEmail(sc.next());
-					sc.nextLine();
+					sc.nextLine();//Elimina el \n del scanner
 					break;
 						
 				case 3:
@@ -87,7 +87,7 @@ public class ConexionContactoUsuario {
 			System.out.println("\nCrear una nueva:\n\t0 No\n\t1 Si");
 			System.out.print("\nOpcion: ");
 			opcion = sc.nextInt();
-			sc.nextLine();
+			sc.nextLine();//Elimina el \n del scanner
 				
 			switch (opcion) {
 				case 0:
@@ -110,6 +110,7 @@ public class ConexionContactoUsuario {
 		
 	}
 	
+	//convierte DatosContactoUsuario a ContactoUsuario 
 	public static void cargarContactoUsuario() {
 		DatosContactoUsuario.cargarContactoUsuario();
 		DatosContactoUsuario datos = DatosContactoUsuario.datos;
@@ -119,6 +120,7 @@ public class ConexionContactoUsuario {
 		contactoUsuario = ConexionUsuario.usuario.getContactoUsuario();
 	}
 	
+	//convierte ContactoUsuario a DatosContactoUsuario
 	public static void guardarContactoUsuario() {
 		DatosContactoUsuario.guardarContactoUsuario(contactoUsuario.getNombre(),
 				contactoUsuario.getEmail(), contactoUsuario.getNombreCompleto(),

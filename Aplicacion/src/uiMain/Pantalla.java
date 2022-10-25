@@ -1,7 +1,6 @@
 package uiMain;
 
 import java.util.Scanner;
-
 import gestorAplicacion.inferior.Usuario;
 
 //El main del programa
@@ -21,7 +20,7 @@ public class Pantalla {
 					+ "\n\t6 Ver Notificaciones de Usuario");
 			System.out.print("\nOpcion: ");
 			opcion = sc.nextInt();
-			sc.nextLine();
+			sc.nextLine(); //Elimina el \n del scanner
 			
 			
 			switch (opcion) {
