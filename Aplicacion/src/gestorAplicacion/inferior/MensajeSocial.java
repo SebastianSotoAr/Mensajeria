@@ -21,8 +21,9 @@ class MensajeSocial extends Mensaje {
 	
 	@Override
 	public String toString() {
-		return "MensajeSocial [fechaYHora=" + this.getFechaYHora() + ", titulo=" + this.getTitulo() + ", cuerpo=" + this.getCuerpo() 
-		+ ", nombreA=" + nombreA + ", nombreB=" + nombreB + "]";
+		return "MensajeSocial [\n\tFecha Y Hora: " + this.getFechaYHora() + "\n\tTitulo: " 
+				+ this.getTitulo() + "\n\tCuerpo: " + this.getCuerpo() 
+				+ "\n\tNombre Usuario: " + nombreA + "\n\tNombre Contacto: " + nombreB + "\n]";
 	}
 
 	String getNombreA() {

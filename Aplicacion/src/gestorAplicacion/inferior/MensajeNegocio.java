@@ -24,10 +24,11 @@ class MensajeNegocio extends Mensaje {
 	}
 	
 	public String toString() {
-		return  "MensajeNegocios [fechaYHora= " + this.getFechaYHora() + ", titulo=" + this.getTitulo()
-			+ ", cuerpo=" + this.getCuerpo() + ", urgencia=" + urgencia + ", logo=" + logo + ", descripcion=" + descripcion 
-			+ ", termino=" + termino + ", nombreCompletoA=" + nombreCompletoA + ", nombreCompletoB=" 
-			+ nombreCompletoB + "]";
+		return  "MensajeNegocios [\n\tFecha Y Hora: " + this.getFechaYHora() + "\n\tTitulo: " + this.getTitulo()
+				+ "\n\tCuerpo: " + this.getCuerpo() + "\n\tUrgencia:" + urgencia + "\n\tLogo del Negocio: " 
+				+ logo + "\n\tDescripcion del Negocio:" + descripcion 
+				+ "\n\tTerminos del Negocio: " + termino + "\n\tNombre Completo Usuario: " + nombreCompletoA 
+				+ "\n\tNombre Completo Contacto: " + nombreCompletoB + "\n]";
 	}
 
 	String getLogo() {

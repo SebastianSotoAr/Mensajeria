@@ -80,10 +80,10 @@ public class Usuario {
 	public String mostrarChats() {
 		String texto = "";
 		for(ContactosLocales c: contactosLocales) {
-			texto += "email: " + c.getEmail() + "\n";
-			texto += "Mensajes: " + "\n";
+			texto += "Email: " + c.getEmail() + "\n";
+			texto += "\tMensajes: " + "\n";
 			for (Mensaje m: c.getMensajes()) {
-				texto += m + "\n";
+				texto += "\t" + m + "\n";
 			}	
 		}
 		return texto;	

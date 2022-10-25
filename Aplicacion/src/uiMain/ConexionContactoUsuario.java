@@ -79,17 +79,18 @@ public class ConexionContactoUsuario {
 		String cuerpo;
 		String urgencia;
 		do {
-			System.out.println("Notificaciones: ");
+			System.out.println("-----Crear Notificaciones-----");
+			System.out.println("Notificaciones:");
 			for(Object n: contactoUsuario.getNotificaciones()) {
 				System.out.println(n);
 			}
-			System.out.println("Crear una nueva:\n0 no\n1 si");
+			System.out.println("\nCrear una nueva:\n\t0 No\n\t1 Si");
 			opcion = sc.nextInt();
 			sc.nextLine();
 				
 			switch (opcion) {
 				case 0:
-					System.out.println("Termino modificacion de Perfil");
+					System.out.println("-----Notificaciones Creadas-----");
 					break;
 					
 				case 1:

@@ -31,7 +31,7 @@ public class ConexionUsuario {
 		do {
 			System.out.println("Tipo de Urgencia:");
 			System.out.println("\tOpciones:\n\t\t1 Riesgo Vital\n\t\t2 Muy Urgente\n\t\t2 Urgente"
-					+ "\n\t\t4 Normal\n\t\t5 noUrgente");
+					+ "\n\t\t4 Normal\n\t\t5 No Urgente");
 			System.out.print("\t\nTipo: ");
 			opcion = sc.nextInt();
 			sc.nextLine();
@@ -73,8 +73,8 @@ public class ConexionUsuario {
 		int opcion;
 		do {
 			System.out.println("-----Empezar Chat-----");
-			System.out.println("Elige un contacto:");
-			System.out.println("\t0 Cancelar");
+			System.out.println("Elige un contacto o Cancela:");
+			System.out.println("\t0 Cancelar\n");
 			//Imprime todos los contactos locales con un indce al principio
 			for (int i = 0; i < usuario.getContactosPendientes().size(); i++) {
 				System.out.println("\t" + (i+1) + " "
@@ -138,19 +138,23 @@ public class ConexionUsuario {
 	
 	//Muestra los chats 
 	public void mostrarChats() {
+		System.out.println("-----Chats-----");
 		System.out.println(usuario.mostrarChats());
+		System.out.println("-----Estos fueron todos los Chats-----");
 	}
 	
 	//Permite elegir a que contacto local enviarle un mensaje adicional
 	public void seguirChat(Scanner sc) {
 		int opcion;
 		do {
-			System.out.println("Elige un contacto");
-			System.out.println("0 cancelar");
+			System.out.println("-----Seguir Chat-----");
+			System.out.println("Elige un contacto o Cancela:");
+			System.out.println("\t0 Cancelar\n");
 			//Imprime todos los contactos locales con un indce al principio
 			for (int i = 0; i < usuario.getContactosLocales().size(); i++) {
-				System.out.println((i+1) + " " + usuario.getContactoLocal(i).toString());
+				System.out.println("\t" + (i+1) + " " + usuario.getContactoLocal(i).toString());
 			}
+			System.out.print("Opcion: ");
 			opcion = sc.nextInt();
 			sc.nextLine();
 			
@@ -162,7 +166,7 @@ public class ConexionUsuario {
 				System.out.println("Seleccione un numero entre 0 y " + usuario.getContactosLocales().size());
 				
 			} else {
-				System.out.println("Termino empezar chat");
+				System.out.println("-----Chats Enviados-----");
 				
 			}
 			

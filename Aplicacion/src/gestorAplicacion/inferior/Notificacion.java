@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import gestorAplicacion.superior.FechaYHora;
 
 //Son los mensajes que el usuario se envia a si mismo
-public class Notificacion implements FechaYHora {
+class Notificacion implements FechaYHora {
 	final String fechaYHora;
 	String titulo;
 	String cuerpo;
@@ -25,7 +25,7 @@ public class Notificacion implements FechaYHora {
 	
 	@Override
 	public String toString() {
-		return "Notificacion [titulo=" + titulo + ", cuerpo=" + cuerpo + ", urgencia=" + urgencia + "]";
+		return "\tNotificacion [\n\t\tTitulo: " + titulo + "\n\t\tCuerpo: " + cuerpo + "\n\t\tUrgencia: " + urgencia + "\n]";
 	}
 
 	String getTitulo() {
